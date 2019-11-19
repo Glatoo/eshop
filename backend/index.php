@@ -1,5 +1,4 @@
 <?php
-include "env.php";
 include "layout/header.php";
 include "layout/nav.php";
 ?>

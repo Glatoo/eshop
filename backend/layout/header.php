@@ -1,4 +1,6 @@
 <?php
+define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
+include ROOT."../../common/env.php"
 ?>
 <!DOCTYPE html>
 <html lang="sk">
