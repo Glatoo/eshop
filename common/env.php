@@ -1,8 +1,8 @@
 <?php
 $title = "Brano shop";
-$time_zone = "Europe/Bratislava";
+define("time_zone","Europe/Bratislava");
 
-$DB_server = "localhost";
-$DB_name = "eshop";
-$DB_username = "root";
-$DB_password = "";
+define("DB_server", "localhost");
+define("DB_name","eshop");
+define("DB_username", "root");
+define("DB_password", "");

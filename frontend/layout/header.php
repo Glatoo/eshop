@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
 include ROOT."../../common/env.php"
 ?>
