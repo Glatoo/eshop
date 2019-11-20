@@ -24,23 +24,55 @@ function login($name, $password)
 
         $stmt->execute();
 
-        $result = $stmt->get_result();
-
-        $i = $result->num_rows;
-        $stmt->free_result();
-        if ($i > 0) {
-            $conn->close();
-            return 1;
-        } else {
-            $conn->close();
-            return -3;
-        }
+        return $stmt->num_rows >0?1:-3;
     }
     $conn->close();
     return -5;
 }
 
-function register()
+function register($username, $firstname, $surname, $address, $email, $password)
 {
-    echo "Register";
+    if (!isset($username) || !isset($firstname) || !isset($surname) || !isset($address) || !isset($email) || !isset($password)) {
+        return -1; // Chybajuce data
+    }
+    if (strlen($username) == 0 || strlen($firstname) == 0 || strlen($surname) == 0 || strlen($address) == 0 || strlen($email) == 0 || strlen($password) < 8) {
+        echo json_encode($_POST);
+        return -2; //Neplatne(prazdne) udaje
+    }
+    $conn = new mysqli(DB_server, DB_username, DB_password, DB_name);
+    if ($conn->connect_error) {
+        echo $conn->connect_error;
+        return -3;//Zlyhalo pripojenie na DB
+    }
+    if ($stmt = $conn->prepare('SELECT * FROM users WHERE username=? OR email=?')) {
+
+        $stmt->bind_param("ss", $username, $email);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $stmt->close();
+        if ($stmt->num_rows > 0) {
+            $conn->close();
+            return -4; //Uzivatel je zaregistrovany alebo email sa pouziva
+        } else {
+            if ($stmt = $conn->prepare("INSERT INTO users (username, firstname, lastname, address, email, pass) VALUES (?, ?, ?, ?, ?, ?)")) {
+                $stmt->bind_param("ssssss", $username, $firstname, $surname, $address, $email, $password);
+
+                $stmt->execute();
+
+                $stmt->close();
+                $conn->close();
+                return 1;
+            } else {
+                echo $conn->error;
+                echo $stmt->error;
+                return -6; //Zlyhalo pripravenie SQL pri vlozeni osoby
+            }
+        }
+    } else {
+        $conn->close();
+        return -5;//Zlyhalo pripravenie SQL pri ziskani osoby
+    }
 }
