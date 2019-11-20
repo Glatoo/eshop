@@ -1,3 +1,16 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #040404;
+    font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+}
+
 .btn-link{
     border: none;
     outline: none;
@@ -7,13 +20,79 @@
     font-family: inherit;
     font-size: inherit;
 }
-.carousel-control-prev-icon{
 
-}
 .carousel-control-next-icon {
     background-image : url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M1.5 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E")!important;
     color: black;
 }
-.sranda{
-    color: red!important;
+
+.announcement{
+    background-color: #308E4F;
+    color: #000000;
+    text-align: center;
+}
+.announcement p{
+    margin:0;
+    padding: 4px;
+}
+
+nav{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.nav{
+    list-style: none!important;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav li{
+    display: inline;
+    padding-top: 10px;
+}
+
+.nav a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    color: #A8A8A8;
+    transition-duration: 0.2s;
+    padding: 15px;
+
+}
+
+.nav a:hover{
+    color: #c3c3c3;
+    transition-duration: 0.2s;
+}
+
+.nav-item-right a{
+    position: absolute;
+    right: 2%;
+    color: white !important;
+}
+
+.nav-item-left a{
+    position: absolute;
+    left: 2%;
+    color: white !important;
+}
+
+.nav-item-active a{
+    color: #45A133;
+}
+
+.nav-item-active a:hover{
+    color: #337626;
+}
+
+.index-article h1{
+    color: #171717;
+    font-size: 80px;
+    position: absolute;
+    left: 4%;
+    top: 5%;
 }

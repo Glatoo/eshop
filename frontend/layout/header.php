@@ -1,9 +1,15 @@
+
+
 <?php
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 header('Content-type: text/plain; charset=utf-8');
 define('ROOT', dirname(__FILE__).DIRECTORY_SEPARATOR);
 include ROOT."../../common/env.php"
 ?>
+
 <!DOCTYPE html>
 <html lang="sk">
 <head>
