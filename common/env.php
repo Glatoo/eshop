@@ -1,5 +1,5 @@
 <?php
-$title = "Brano shop";
+$title = "Yeet";
 define("time_zone","Europe/Bratislava");
 
 define("DB_server", "localhost");
