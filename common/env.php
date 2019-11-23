@@ -1,5 +1,6 @@
 <?php
 $title = "Yes";
+$store_name = "Store Name Here";
 $announcement = "Important announcement";
 
 define("time_zone","Europe/Bratislava");

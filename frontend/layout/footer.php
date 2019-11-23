@@ -1,13 +1,6 @@
-<footer class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">Slovakia</div>
-            <div class="col-md-4 text-center">
-                &copy;Branislav Hozza
-            </div>
-            <div class="col-md-4 text-center">2019/2020</div>
-        </div>
-    </div>
+<footer class="page-footer">
+
+
 </footer>
 <!-- Optional JavaScript -->
 <script src="../js/script.js"></script>
