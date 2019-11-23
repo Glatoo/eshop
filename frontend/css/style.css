@@ -30,6 +30,7 @@ body{
     background-color: #308E4F;
     color: #000000;
     text-align: center;
+    display: none;
 }
 .announcement p{
     margin:0;
@@ -71,8 +72,15 @@ nav{
 
 .nav-item-right a{
     position: absolute;
-    right: 2%;
-    color: white !important;
+    right: 0;
+    color: white;
+    background-color: #2c783e;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-item-right a:hover{
+    color: #000000;
 }
 
 .nav-item-left a{
@@ -82,18 +90,74 @@ nav{
 }
 
 .nav-item-active a{
-    color: #45A133;
+    color: #308E4F;
 }
 
 .nav-item-active a:hover{
     color: #337626;
 }
 
-.index-article h1{
-    color: #171717;
-    font-size: 80px;
-    position: absolute;
-    left: 4%;
-    top: 5%;
+.heading{
+    color: #f1f1f1;
+    font-size: 72px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #308E4F;
+    padding: 50px;
+    margin-bottom: 0;
+    margin-top: 0;
 }
-.heading{ word-spacing: 100vw; }
+
+.heading-container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading-container p{
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.menu{
+    position: fixed;
+    top: 50%;
+    transform: translateY(50%);
+}
+
+.dot{
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    transition-duration: 0.5s;
+    border-radius: 50%;
+    display: grid;
+    margin: 10px;
+}
+
+.dot:hover{
+    background-color: #737373;
+    transition-duration: 0.5s;
+}
+
+.dot-active{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: grid;
+    margin: 10px;
+    background-color: #0f6674;
+    transition-duration: 0.5s;
+}
+
+.dot-active:hover{
+    background-color: #116273;
+    transition-duration: 0.5s;
+}
+
