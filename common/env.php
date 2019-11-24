@@ -1,5 +1,5 @@
 <?php
-$title = "Yes";
+$title = "YES";
 $store_name = "Store Name Here";
 $announcement = "Important announcement";
 
