@@ -358,27 +358,34 @@ article {
     background-color: white;
 }
 /*    LOGIN     */
+.forms-article{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
 
 .vl{
     border-left: 1px solid #707070;
-    height: 60%;
+    height: 800%;
+    transform: translateY(-200%);
     position: absolute;
     left: 50%;
     top: 25%
 }
 
-.forms-article{
-    height: 100%;
-    background-color: white;
-}
 
 .forms{
     display: flex;
     flex-wrap: wrap;
+    height: 20%;
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
+}
+.signup, .login{
+    border: solid red 1px;
+
 }
 
 .signup-form input{

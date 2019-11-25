@@ -25,28 +25,28 @@ if(isset($_POST["login"])){
 }
 ?>
     <article class="forms-article">
-        <div class="vl"></div>
         <div class="forms">
             <div class="login">
                 <form class="login-form" action="">
-                    <label for="email">E-mail</label>
-                    <input type="text" name="email">
-                    <label for="password">Password</label>
-                    <input type="password" name="password">
+                    <label for="email-l">E-mail</label>
+                    <input type="text" name="email" id="email-l">
+                    <label for="password-l">Password</label>
+                    <input type="password" name="password" id="password-l">
                 </form>
             </div>
+            <div class="vl"></div>
             <div class="signup">
                 <form class="signup-form" action="">
                     <label for="firstname">Name</label>
-                    <input type="text" name="firstname">
+                    <input type="text" name="firstname" id="firstname">
                     <label for="surname">Surname</label>
-                    <input type="text" name="surname">
+                    <input type="text" name="surname" id="surname">
                     <label for="email">E-mail</label>
-                    <input type="text" name="email">
+                    <input type="text" name="email" id="email">
                     <label for="password">Password</label>
-                    <input type="password" name="password">
+                    <input type="password" name="password" id="password">
                     <label for="repassword">Repeat password</label>
-                    <input type="password" name="repassword">
+                    <input type="password" name="repassword" id="repassword">
                 </form>
             </div>
         </div>
