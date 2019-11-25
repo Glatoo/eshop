@@ -18,7 +18,7 @@ include ROOT."../../common/env.php"
 
     <title><?php echo $title;?></title>
 </head>
-<body>
+<body><!--
 <div style="position: fixed; z-index: -99; width: 100%; height: 100%" id="vid">
-    <iframe width="100%" height="120%" src="https://www.youtube.com/embed/BHACKCNDMW8?autoplay=1&controls=0&showinfo=0&autohide=1&hd=1&disablekb=1&mute=1&start=180"></iframe>
-</div>
+   <iframe width="100%" height="120%" src="https://www.youtube.com/embed/BHACKCNDMW8?autoplay=1&controls=0&showinfo=0&autohide=1&hd=1&disablekb=1&mute=1&start=180"></iframe>
+</div> -->

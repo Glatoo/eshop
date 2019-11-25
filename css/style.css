@@ -140,7 +140,9 @@ article {
     animation: 1s ease-out 2s 1 heading;
 
 }
-
+html * {
+    box-sizing: border-box;
+}
 
 .heading-container {
     --border-width: 0.1em;
