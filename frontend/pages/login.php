@@ -1,42 +1,55 @@
 <?php
-include "../env.php";
 include "../layout/header.php";
 include "../layout/nav.php";
+include "../controllers/userController.php";
+if(isset($_POST["login"])){
+    $status = login($_POST["username"], $_POST["password"]);
+    if($status == -1){
+        echo "Nevyplnene polia";
+    }
+    else if ($status == -2){
+        echo "Neviem sa napojit na DB";
+    }
+    else if ($status == -3){
+        echo "Zle udaje";
+    }
+    else if ($status == -4){
+        echo "Prazdne pole";
+    }
+    else if ($status == -5){
+        echo "Chyba vo vykonani";
+    }
+    else if($status == 1){
+        echo "Sme dnu";
+    }
+}
 ?>
-    <article>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-
-                    <div id="carousel_home" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="../img/vans1jpg.jpg" class="d-block w-100 img-fluid" alt="vans1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/vans2.jpg" class="d-block w-100 img-fluid" alt="vans2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="../img/converse1.png" class="d-block w-100 img-fluid" alt="converse1">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#carousel_home" role="button" data-slide="prev">
-                            <i class="fa fa-angle-left" style="color: black;" aria-hidden="true"></i>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carousel_home" role="button" data-slide="next">
-                            <i class="fa fa-angle-right" style="color: black;" aria-hidden="true"></i>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-2"></div>
+    <article class="forms-article">
+        <div class="vl"></div>
+        <div class="forms">
+            <div class="login">
+                <form class="login-form" action="">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+                </form>
+            </div>
+            <div class="signup">
+                <form class="signup-form" action="">
+                    <label for="firstname">Name</label>
+                    <input type="text" name="firstname">
+                    <label for="surname">Surname</label>
+                    <input type="text" name="surname">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email">
+                    <label for="password">Password</label>
+                    <input type="password" name="password">
+                    <label for="repassword">Repeat password</label>
+                    <input type="password" name="repassword">
+                </form>
             </div>
         </div>
-        <section>
-            <p>index</p>
-        </section>
     </article>
 
 <?php
