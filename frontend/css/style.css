@@ -32,20 +32,11 @@ body {
     color: black;
 }
 
-@keyframes announce {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .announcement {
     background-color: #308E4F;
     color: #000000;
     text-align: center;
-    animation: 1s ease-out 0s 1 announce;
 }
 
 .announcement p {
@@ -57,7 +48,6 @@ nav {
     background-color: #000000;
     margin: 0;
     padding: 0;
-    animation: 1s ease-out 0s 1 announce;
 }
 
 .nav {
@@ -131,14 +121,13 @@ nav {
 
 article {
     opacity: 0.8;
-    height: 120%;
+    height: auto;
     background-color: black;
 }
 
 .vid {
     background-color: black;
     animation: 1s ease-out 2s 1 heading;
-
 }
 
 
@@ -150,7 +139,6 @@ article {
     position: relative;
     display: inline-block;
     font-size: 4em;
-    line-height: 1em;
     transform: scale(1, 0.8);
     border: var(--border-width) solid transparent;
     animation: 1s ease-out 0s forwards borderColors;
@@ -165,9 +153,9 @@ article {
 }
 .heading {
     margin: 0;
-    height: 100%;
     position: relative;
     display: inline-block;
+    text-align: center;
     font-family: 'Six Caps', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
@@ -180,13 +168,13 @@ article {
     border: solid var(--border-width) transparent;
 }
 
-.heading-container:before{
+.heading-container::before{
     content: '';
     position: absolute;
     background: var(--color);
     animation: 1s ease-out 0s forwards beforeBorders;
 }
-.heading-container:after{
+.heading-container::after{
     content: '';
     position: absolute;
     background: var(--color);
@@ -305,7 +293,7 @@ article {
 
 @keyframes background {
     to {
-        background: #555;
+        background: transparent;
         text-shadow: 0 0.1em 0.1em #111;
     }
 }
@@ -369,6 +357,34 @@ article {
     height: auto;
     background-color: white;
 }
-
 /*    LOGIN     */
 
+.vl{
+    border-left: 1px solid #707070;
+    height: 60%;
+    position: absolute;
+    left: 50%;
+    top: 25%
+}
+
+.forms-article{
+    height: 100%;
+    background-color: white;
+}
+
+.forms{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.signup-form input{
+    display: block;
+}
+
+.login-form input{
+    display: block;
+}
