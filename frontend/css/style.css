@@ -395,3 +395,14 @@ article {
 .login-form input{
     display: block;
 }
+/*Products*/
+.product-container{
+    border: 1px solid grey;
+    background-color: dimgray;
+    width: 90%;
+    border-radius: 5%;
+    margin-left: auto;
+    margin-bottom: 1em;
+    margin-right: auto;
+
+}
