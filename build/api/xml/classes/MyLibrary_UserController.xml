@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\UserController" namespace="MyLibrary" name="UserController" abstract="false" final="false" start="14" end="119">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="userController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/userController.php" size="4134" time="2019-11-26T20:26:34+01:00" unixtime="1574796394" sha1="4a4bfd4e5ab89374859ef6b0be838e7d58131ce4" relative="controllers/userController.php"/>
+  <docblock>
+    <description compact="Hlavna trieda pre uzivatela"/>
+    <author value="Branislav Hozza"/>
+    <copyright value="Branislav Hozza, All rights reserved."/>
+    <license name="No License"/>
+    <link value="http://brano-shop.test"/>
+  </docblock>
+  <method name="login" start="29" end="54" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Funkcia pre prihlasenie"/>
+      <param description="Pouzivatelove meno" type="string" variable="$name"/>
+      <param description="Heslo" type="string" variable="$password"/>
+      <return description="Vraciam status:" type="int">1  Spravny vystup
+     -1 Chybajuce data
+     -2 Pripojenie zlyhalo
+     -3 Uzivatel neexituje
+     -4 Neplatne (prazdne udaje)
+     -5 Zlyhalo pripravenie SQL</return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="register" start="73" end="118" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Funkcia registruje noveho uzivatela"/>
+      <param description="Pouzivatelske meno" type="string" variable="$username"/>
+      <param description="Prve meno" type="string" variable="$firstname"/>
+      <param description="Priezvisko" type="string" variable="$surname"/>
+      <param description="Adresa" type="string" variable="$address"/>
+      <param description="Mail" type="string" variable="$email"/>
+      <param description="Heslo" type="string" variable="$password"/>
+      <return description="Vraciam status:" type="int">1  Spravny vystup
+     -1 Chybajuce data
+     -2 Neplatne (prazdne udaje)
+     -3 Pripojenie zlyhalo
+     -4 Uzivatel existuje alebo email sa pouziva
+     -5 Zlyhalo pripravenie SQL pri ziskani uzivatelov
+     -6 Zlyhalo pripravenie SQL pri vlozeni uzivatela</return>
+    </docblock>
+    <parameter name="username" byreference="false" type="{unknown}"/>
+    <parameter name="firstname" byreference="false" type="{unknown}"/>
+    <parameter name="surname" byreference="false" type="{unknown}"/>
+    <parameter name="address" byreference="false" type="{unknown}"/>
+    <parameter name="email" byreference="false" type="{unknown}"/>
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+</class>

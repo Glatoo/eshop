@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/pages" file="shops.php" realpath="C:/xampp/htdocs/eshop/frontend/pages/shops.php" size="206" time="2019-11-25T18:39:11+01:00" unixtime="1574703551" sha1="6f8b9b95b061c411576c9a994902e623e8c6a36a" relative="pages/shops.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"../layout/header.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="3">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"../layout/nav.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="5">
+    <token name="T_INLINE_HTML">&lt;article&gt;</token>
+  </line>
+  <line no="6">
+    <token name="T_INLINE_HTML">    &lt;section&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_INLINE_HTML">        &lt;p&gt;Bla bla bla bla bla&lt;/p&gt;</token>
+  </line>
+  <line no="8">
+    <token name="T_INLINE_HTML">    &lt;/section&gt;</token>
+  </line>
+  <line no="9">
+    <token name="T_INLINE_HTML">&lt;/article&gt;</token>
+  </line>
+  <line no="10"/>
+  <line no="11">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="12">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"../layout/footer.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="13"/>
+</source>

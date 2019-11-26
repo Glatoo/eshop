@@ -3,7 +3,7 @@ include "../layout/header.php";
 include "../layout/nav.php";
 include "../controllers/userController.php";
 if(isset($_POST["login"])){
-    $status = login($_POST["username"], $_POST["password"]);
+    $status = MyLibrary\UserController::login($_POST["username"], $_POST["password"]);
     if($status == -1){
         echo "Nevyplnene polia";
     }

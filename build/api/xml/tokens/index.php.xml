@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend" file="index.php" realpath="C:/xampp/htdocs/eshop/frontend/index.php" size="759" time="2019-11-26T18:29:08+01:00" unixtime="1574789348" sha1="c398f2e8b45c11d61b57a26b8316eb1222c82c94" relative="index.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"layout/header.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="3">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"layout/nav.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="5"/>
+  <line no="6"/>
+  <line no="7"/>
+  <line no="8">
+    <token name="T_INLINE_HTML">&lt;article class="index-article"&gt;</token>
+  </line>
+  <line no="9">
+    <token name="T_INLINE_HTML">    &lt;section&gt;</token>
+  </line>
+  <line no="10">
+    <token name="T_INLINE_HTML">        &lt;div class="heading-container"&gt;</token>
+  </line>
+  <line no="11">
+    <token name="T_INLINE_HTML">            &lt;h1 class="heading"&gt;</token>
+  </line>
+  <line no="12">
+    <token name="T_INLINE_HTML">                </token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$store_name</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="13">
+    <token name="T_INLINE_HTML">            &lt;/h1&gt;</token>
+  </line>
+  <line no="14">
+    <token name="T_INLINE_HTML">            &lt;p&gt;Lorem ipsum hello my name is peter dzejnous a v&#xED;tam &#x165;a na svojej paradnej str&#xE1;nke&lt;/p&gt;</token>
+  </line>
+  <line no="15">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="16">
+    <token name="T_INLINE_HTML">        &lt;div class="menu"&gt;</token>
+  </line>
+  <line no="17">
+    <token name="T_INLINE_HTML">            &lt;a href="#"&gt;&lt;span class="dot"&gt;&lt;/span&gt;&lt;/a&gt;</token>
+  </line>
+  <line no="18">
+    <token name="T_INLINE_HTML">            &lt;a href="#"&gt;&lt;span class="dot"&gt;&lt;/span&gt;&lt;/a&gt;</token>
+  </line>
+  <line no="19">
+    <token name="T_INLINE_HTML">            &lt;a href="#"&gt;&lt;span class="dot"&gt;&lt;/span&gt;&lt;/a&gt;</token>
+  </line>
+  <line no="20">
+    <token name="T_INLINE_HTML">        &lt;/div&gt;</token>
+  </line>
+  <line no="21">
+    <token name="T_INLINE_HTML">    &lt;/section&gt;</token>
+  </line>
+  <line no="22">
+    <token name="T_INLINE_HTML">    &lt;div class="clear"&gt;&lt;/div&gt;</token>
+  </line>
+  <line no="23">
+    <token name="T_INLINE_HTML">&lt;/article&gt;</token>
+  </line>
+  <line no="24"/>
+  <line no="25">
+    <token name="T_INLINE_HTML">&lt;section class="about-us"&gt;</token>
+  </line>
+  <line no="26">
+    <token name="T_INLINE_HTML">    &lt;h1&gt;Newest arrivals&lt;/h1&gt;</token>
+  </line>
+  <line no="27"/>
+  <line no="28">
+    <token name="T_INLINE_HTML">&lt;/section&gt;</token>
+  </line>
+  <line no="29">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="30">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"layout/footer.php"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="31"/>
+</source>

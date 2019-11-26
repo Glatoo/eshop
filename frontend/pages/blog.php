@@ -8,7 +8,7 @@ include "../controllers/blogController.php"
         <h1>Blog</h1>
         <p style="color: white">
             <?php
-            $articles = get_articles(20);
+            $articles = MyLibrary\BlogController::get_articles(20);
             echo "<h1 style='color: #fff;'>Pocet produktov: " . count($articles) . "ks</h1>";
             foreach ($articles as $article) {
                 echo "<div class='article-container' style='color: white'>";

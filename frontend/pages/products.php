@@ -9,7 +9,7 @@ include "../controllers/productsController.php"
         <form action="products.php" style="color: white" method="post">
             <h1 style="color: #fff;">Search</h1>
             <?php
-            $categories = get_categories();
+            $categories = MyLibrary\ProductController::get_categories();
             foreach ($categories as $category){
                 echo "<label for='".$category."'>".$category."</label>";
                 echo "<input value='".$category."' id='".$category."' type='checkbox' name='category[]'>";
@@ -22,9 +22,9 @@ include "../controllers/productsController.php"
         <?php
         if (!empty($_POST["category"])) {
             echo "<p style='color: white'>".json_encode($_POST["category"])."</p>";
-            $products = get_products(20, $_POST["category"]);
+            $products = MyLibrary\ProductController::get_products(20, $_POST["category"]);
         }else{
-            $products = get_products(20);
+            $products = MyLibrary\ProductController::get_products(20);
         }
             echo "<h1 style='color: #fff;'>Pocet produktov: ".count($products)."ks</h1>";
             foreach ($products as $index => $product) {

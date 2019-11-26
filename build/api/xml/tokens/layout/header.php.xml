@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="header.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/header.php" size="870" time="2019-11-25T18:39:11+01:00" unixtime="1574703551" sha1="d0f8bc05275f2ebd07e1fd0ce494e5b7b76cc92f" relative="layout/header.php"/>
+  <line no="1"/>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="4">
+    <token name="T_STRING">header</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Cache-Control: no-store, no-cache, must-revalidate, max-age=0"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="5">
+    <token name="T_STRING">header</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Cache-Control: post-check=0, pre-check=0"</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">false</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="6">
+    <token name="T_STRING">header</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Pragma: no-cache"</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="7">
+    <token name="T_STRING">error_reporting</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_STRING">E_ERROR</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_PIPE">|</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">E_WARNING</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_PIPE">|</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">E_PARSE</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="8">
+    <token name="T_STRING">define</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'ROOT'</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">dirname</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_FILE">__FILE__</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_STRING">DIRECTORY_SEPARATOR</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="9">
+    <token name="T_INCLUDE">include</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">ROOT</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"../../common/env.php"</token>
+  </line>
+  <line no="10">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="11"/>
+  <line no="12">
+    <token name="T_INLINE_HTML">&lt;!DOCTYPE html&gt;</token>
+  </line>
+  <line no="13">
+    <token name="T_INLINE_HTML">&lt;html lang="sk"&gt;</token>
+  </line>
+  <line no="14">
+    <token name="T_INLINE_HTML">&lt;head&gt;</token>
+  </line>
+  <line no="15">
+    <token name="T_INLINE_HTML">    &lt;meta charset="utf-8"&gt;</token>
+  </line>
+  <line no="16">
+    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;</token>
+  </line>
+  <line no="17">
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="../css/style.css"&gt;</token>
+  </line>
+  <line no="18"/>
+  <line no="19">
+    <token name="T_INLINE_HTML">    &lt;title&gt;</token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$title</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&lt;/title&gt;</token>
+  </line>
+  <line no="20">
+    <token name="T_INLINE_HTML">&lt;/head&gt;</token>
+  </line>
+  <line no="21">
+    <token name="T_INLINE_HTML">&lt;body&gt;&lt;!--</token>
+  </line>
+  <line no="22">
+    <token name="T_INLINE_HTML">&lt;div style="position: fixed; z-index: -99; width: 100%; height: 100%" id="vid"&gt;</token>
+  </line>
+  <line no="23">
+    <token name="T_INLINE_HTML">   &lt;iframe width="100%" height="120%" src="https://www.youtube.com/embed/BHACKCNDMW8?autoplay=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;disablekb=1&amp;mute=1&amp;start=180"&gt;&lt;/iframe&gt;</token>
+  </line>
+  <line no="24">
+    <token name="T_INLINE_HTML">&lt;/div&gt; --&gt;</token>
+  </line>
+  <line no="25"/>
+</source>

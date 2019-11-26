@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="nav.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/nav.php" size="1053" time="2019-11-25T18:39:11+01:00" unixtime="1574703551" sha1="16e41f1d4fd9fae73173779a0cb91701167cc47c" relative="layout/nav.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2">
+    <token name="T_VARIABLE">$currentPage</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$_SERVER</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'REQUEST_URI'</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="3">
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="4">
+    <token name="T_INLINE_HTML">&lt;div class="announcement" id="announcement"&gt;</token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;p&gt;</token>
+    <token name="T_VARIABLE">$announcement</token>
+    <token name="T_ENCAPSED_AND_WHITESPACE">&lt;/p&gt;</token>
+    <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&lt;/div&gt;</token>
+  </line>
+  <line no="5">
+    <token name="T_INLINE_HTML">&lt;nav&gt;</token>
+  </line>
+  <line no="6">
+    <token name="T_INLINE_HTML">    &lt;ul class="nav"&gt;</token>
+  </line>
+  <line no="7">
+    <token name="T_INLINE_HTML">            &lt;li class="nav-item-left"&gt;&lt;a href="../index.php"&gt;</token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$title</token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="8">
+    <token name="T_INLINE_HTML">            &lt;li </token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$currentPage</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/index.php'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item-active"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ELSE">else</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&gt;&lt;a href="../index.php"&gt;Home&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="9">
+    <token name="T_INLINE_HTML">            &lt;li </token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$currentPage</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/pages/products.php'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item-active"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ELSE">else</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&gt;&lt;a href="../pages/products.php"&gt;Products&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="10">
+    <token name="T_INLINE_HTML">            &lt;li </token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$currentPage</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/pages/blog.php'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item-active"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ELSE">else</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&gt;&lt;a href="../pages/blog.php"&gt;Blog&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="11">
+    <token name="T_INLINE_HTML">            &lt;li </token>
+    <token name="T_OPEN_TAG">&lt;?php </token>
+    <token name="T_IF">if</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$currentPage</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_IS_EQUAL">==</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'/pages/contact.php'</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item-active"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_ELSE">else</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'class="nav-item"'</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+    <token name="T_INLINE_HTML">&gt;&lt;a href="../pages/contact.php"&gt;Contact&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="12">
+    <token name="T_INLINE_HTML">            &lt;li class="nav-item-right"&gt;&lt;a href="../pages/login.php"&gt;Log In&lt;/a&gt;&lt;/li&gt;</token>
+  </line>
+  <line no="13">
+    <token name="T_INLINE_HTML">    &lt;/ul&gt;</token>
+  </line>
+  <line no="14"/>
+  <line no="15">
+    <token name="T_INLINE_HTML">&lt;/nav&gt;</token>
+  </line>
+  <line no="16"/>
+</source>

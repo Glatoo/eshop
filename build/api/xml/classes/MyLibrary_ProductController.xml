@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="14" end="129">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="4158" time="2019-11-26T20:29:37+01:00" unixtime="1574796577" sha1="e683326c4ff77fdd4b412706e6e448f5610c09be" relative="controllers/productsController.php"/>
+  <docblock>
+    <description compact="Hlavna trieda pre produkty"/>
+    <author value="Branislav Hozza"/>
+    <copyright value="Branislav Hozza, All rights reserved."/>
+    <license name="No License"/>
+    <link value="http://brano-shop.test"/>
+  </docblock>
+  <method name="add_category" start="30" end="74" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Funkcia prida categoriu do DB."/>
+      <param description="Nazov kategorie." type="string" variable="$name"/>
+      <return description="Vraciam status:\n" type="int">1  Spravny vystup
+     -1 Chybajuce data
+     -2 Neplatne (prazdne udaje)
+     -3 Pripojenie zlyhalo
+     -4 Kategoria existuje
+     -5 Zlyhalo pripravenie SQL pri ziskani kategorii
+     -6 Zlyhalo pripravenie SQL pri vlozeni kategorie.</return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get_categories" start="81" end="95" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Funkcia vrati kategorie"/>
+      <return description="Vraciam pole kategorii alebo prazdne pole:" type="array"/>
+    </docblock>
+  </method>
+  <method name="get_products" start="104" end="128" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Funkcia vracia produkty"/>
+      <param description="Pocet produktov" type="int" variable="$amount"/>
+      <param description="Pole vybratych kategorii" type="array" variable="$categories"/>
+      <return description="Vraciam pole produktov. Ak prazdne pole tak nastala chyba alebo produkt neexistuje" type="array"/>
+    </docblock>
+    <parameter name="amount" byreference="false" type="{unknown}"/>
+    <parameter name="categories" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+</class>
