@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: St 20.Nov 2019, 19:52
+-- Čas generovania: Út 26.Nov 2019, 17:44
 -- Verzia serveru: 10.4.6-MariaDB
 -- Verzia PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET SQL_MODE='ALLOW_INVALID_DATES';
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -80,8 +79,37 @@ CREATE TABLE `blog` (
   `title` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
   `content` text COLLATE utf8_slovak_ci NOT NULL,
   `author` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
-  `date` date NOT NULL
+  `date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `blog`
+--
+
+INSERT INTO `blog` (`id`, `title`, `content`, `author`, `date`) VALUES
+(1, 'Kto je frajer dneska?', 'Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?', 'PTere Johnas', '2019-11-25 18:31:26');
+
+-- --------------------------------------------------------
+
+--
+-- Štruktúra tabuľky pre tabuľku `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) COLLATE utf8_slovak_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`) VALUES
+(1, 'Adidas'),
+(2, 'Nike'),
+(3, 'Shoes'),
+(4, 'T-shirt'),
+(5, 'Puma');
 
 -- --------------------------------------------------------
 
@@ -94,8 +122,37 @@ CREATE TABLE `products` (
   `name` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
   `description` text COLLATE utf8_slovak_ci NOT NULL,
   `price` float NOT NULL,
-  `image` text COLLATE utf8_slovak_ci NOT NULL
+  `image` text COLLATE utf8_slovak_ci NOT NULL,
+  `categories` text COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+
+--
+-- Sťahujem dáta pre tabuľku `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `categories`) VALUES
+(1, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(2, 'Yeezy 100', 'Topangy', 250.5, 'img1.jpg', ''),
+(3, 'Yeezy 250', 'Topangy', 110.5, 'img1.jpg', ''),
+(4, 'Yeezy 350', 'Topangy', 230.5, 'img1.jpg', ''),
+(5, 'Adidas 150', 'Topangy', 240.5, 'img1.jpg', ''),
+(6, 'Adidas 250', 'Topangy', 250.5, 'img1.jpg', ''),
+(7, 'Adidas 350', 'Topangy', 250.5, 'img1.jpg', ''),
+(8, 'Adidas 450', 'Topangy', 250.5, 'img1.jpg', ''),
+(9, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(10, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(11, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(12, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(13, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(14, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(15, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(16, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(17, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(18, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(19, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(20, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
+(21, 'Airforce One 250/4', 'New shoes by Adidas', 150.4, 'img2.jpg', 'Shoes,Adidas'),
+(22, 'Puma Tiger 11', 'Puma old school', 98.5, 'img3.jpg', 'Puma,Shoes');
 
 -- --------------------------------------------------------
 
@@ -136,6 +193,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexy pre tabuľku `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexy pre tabuľku `products`
 --
 ALTER TABLE `products`
@@ -167,13 +230,19 @@ ALTER TABLE `admin_tokens`
 -- AUTO_INCREMENT pre tabuľku `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT pre tabuľku `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pre tabuľku `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT pre tabuľku `users`

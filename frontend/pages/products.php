@@ -6,20 +6,37 @@ include "../controllers/productsController.php"
 <article>
     <section>
         <h1>Products:</h1>
-        <p style="color: white">
+        <form action="products.php" style="color: white" method="post">
+            <h1 style="color: #fff;">Search</h1>
+            <?php
+            $categories = get_categories();
+            foreach ($categories as $category){
+                echo "<label for='".$category."'>".$category."</label>";
+                echo "<input value='".$category."' id='".$category."' type='checkbox' name='category[]'>";
+                echo "<br>";
+            }
+            ?>
+            <input type="submit" value="Search">
+
+        </form>
         <?php
+        if (!empty($_POST["category"])) {
+            echo "<p style='color: white'>".json_encode($_POST["category"])."</p>";
+            $products = get_products(20, $_POST["category"]);
+        }else{
             $products = get_products(20);
+        }
             echo "<h1 style='color: #fff;'>Pocet produktov: ".count($products)."ks</h1>";
-            foreach ($products as $product) {
+            foreach ($products as $index => $product) {
+                $index++;
                 echo "<div class='product-container' style='color: white'>";
-                echo "<h1 class='product-header'>" . $product[0] .". ". $product[1]. "</h1>";
-                echo "<p class='product-description'>" . $product[2] . "</p>";
-                echo "<i class='product-price'>" . $product[3] . "</i><br>";
-                echo "<p class='product-img'>" . $product[4] . "</p>";
+                echo "<h1 class='product-header'>" . $index .". ". $product[0]. "</h1>";
+                echo "<p class='product-description'>" . $product[1] . "</p>";
+                echo "<i class='product-price'>" . $product[2] . "</i><br>";
+                echo "<p class='product-img'>" . $product[3] . "</p>";
                 echo "</div>";
             }
         ?>
-        </p>
         <p>products</p>
     </section>
 </article>
