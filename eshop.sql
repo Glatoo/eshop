@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hostiteľ: 127.0.0.1
--- Čas generovania: Út 26.Nov 2019, 17:44
+-- Čas generovania: St 27.Nov 2019, 17:20
 -- Verzia serveru: 10.4.6-MariaDB
 -- Verzia PHP: 7.3.9
 
@@ -56,11 +56,17 @@ INSERT INTO `admins` (`id`, `username`, `firstname`, `surname`, `email`, `addres
 CREATE TABLE `admin_tokens` (
   `id` int(11) NOT NULL,
   `token` text COLLATE utf8_slovak_ci NOT NULL,
-  `create_date` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+  `create_date` date NOT NULL DEFAULT current_timestamp(),
   `expiration_date` date NOT NULL,
   `privileges` varchar(200) COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
+--
+-- Sťahujem dáta pre tabuľku `admin_tokens`
+--
+
+INSERT INTO `admin_tokens` (`id`, `token`, `create_date`, `expiration_date`, `privileges`) VALUES
+(1, 'abc123', '2019-11-14', '2019-11-23', '1,2,5,7');
 
 -- --------------------------------------------------------
 
@@ -80,6 +86,10 @@ CREATE TABLE `blog` (
 -- Sťahujem dáta pre tabuľku `blog`
 --
 
+INSERT INTO `blog` (`id`, `title`, `content`, `author`, `date`) VALUES
+(1, 'Kto je frajer dneska?', 'Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?', 'PTere Johnas', '2019-11-25 18:31:26');
+
+-- --------------------------------------------------------
 
 --
 -- Štruktúra tabuľky pre tabuľku `categories`
@@ -87,10 +97,26 @@ CREATE TABLE `blog` (
 
 CREATE TABLE `categories` (
   `id` int(11) NOT NULL,
-  `name` varchar(200) COLLATE utf8_slovak_ci NOT NULL
+  `value` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
+  `sub_category` varchar(200) COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
+--
+-- Sťahujem dáta pre tabuľku `categories`
+--
 
+INSERT INTO `categories` (`id`, `value`, `sub_category`) VALUES
+(1, 'Adidas', 'Brand'),
+(2, 'Nike', 'Brand'),
+(3, 'Puma', 'Brand'),
+(4, 'Shoes', 'Type'),
+(5, 'T-Shirt', 'Type'),
+(6, 'Trousers', 'Type'),
+(7, '38', 'Size'),
+(8, '39', 'Size'),
+(9, '40', 'Size'),
+(10, '41', 'Size'),
+(11, '42', 'Size');
 
 -- --------------------------------------------------------
 
@@ -102,38 +128,41 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
   `description` text COLLATE utf8_slovak_ci NOT NULL,
+  `size` double NOT NULL,
+  `brand` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
+  `type` varchar(200) COLLATE utf8_slovak_ci NOT NULL,
   `price` float NOT NULL,
-  `image` text COLLATE utf8_slovak_ci NOT NULL,
-  `categories` text COLLATE utf8_slovak_ci NOT NULL
+  `image` text COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
 -- Sťahujem dáta pre tabuľku `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `description`, `price`, `image`, `categories`) VALUES
-(1, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(2, 'Yeezy 100', 'Topangy', 250.5, 'img1.jpg', ''),
-(3, 'Yeezy 250', 'Topangy', 110.5, 'img1.jpg', ''),
-(4, 'Yeezy 350', 'Topangy', 230.5, 'img1.jpg', ''),
-(5, 'Adidas 150', 'Topangy', 240.5, 'img1.jpg', ''),
-(6, 'Adidas 250', 'Topangy', 250.5, 'img1.jpg', ''),
-(7, 'Adidas 350', 'Topangy', 250.5, 'img1.jpg', ''),
-(8, 'Adidas 450', 'Topangy', 250.5, 'img1.jpg', ''),
-(9, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(10, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(11, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(12, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(13, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(14, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(15, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(16, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(17, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(18, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(19, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(20, 'Yeezy 150', 'Topangy', 250.5, 'img1.jpg', ''),
-(21, 'Airforce One 250/4', 'New shoes by Adidas', 150.4, 'img2.jpg', 'Shoes,Adidas'),
-(22, 'Puma Tiger 11', 'Puma old school', 98.5, 'img3.jpg', 'Puma,Shoes');
+INSERT INTO `products` (`id`, `name`, `description`, `size`, `brand`, `type`, `price`, `image`) VALUES
+(1, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(2, 'Yeezy 100', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(3, 'Yeezy 250', 'Topangy', 0, '', '', 110.5, 'img1.jpg'),
+(4, 'Yeezy 350', 'Topangy', 0, '', '', 230.5, 'img1.jpg'),
+(5, 'Adidas 150', 'Topangy', 0, '', '', 240.5, 'img1.jpg'),
+(6, 'Adidas 250', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(7, 'Adidas 350', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(8, 'Adidas 450', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(9, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(10, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(11, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(12, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(13, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(14, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(15, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(16, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(17, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(18, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(19, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(20, 'Yeezy 150', 'Topangy', 0, '', '', 250.5, 'img1.jpg'),
+(21, 'Airforce One 250/4', 'New shoes by Nike', 38, 'Nike', 'Shoes', 150.4, 'img2.jpg'),
+(22, 'Puma Tiger 11', 'Puma old school', 39, 'Puma', 'Shoes', 98.5, 'img3.jpg'),
+(23, 'Nike-Shirt', 'Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt Shirt ', 38, 'Nike', 'T-Shirt', 50.4, 'tshirt1.jpg');
 
 -- --------------------------------------------------------
 
@@ -217,13 +246,13 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT pre tabuľku `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pre tabuľku `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT pre tabuľku `users`

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="20" end="237">
-  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="7596" time="2019-11-27T16:52:23+01:00" unixtime="1574869943" sha1="4d52f6dfadfd1a059f12f66412cb2eb0383eba23" relative="controllers/productsController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="20" end="245">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="7894" time="2019-11-27T17:12:07+01:00" unixtime="1574871127" sha1="85a6b09512abdd3c15df81a9f3f2443da8eb8797" relative="controllers/productsController.php"/>
   <docblock>
     <description compact="Kontroler produktov">Hlavna trieda pre produkty</description>
     <author value="Branislav Hozza &lt;brankohozza@gmail.com&gt;"/>
@@ -51,7 +51,7 @@
     <parameter name="image" byreference="false" type="string" default="&quot;none.jpg&quot;"/>
     <parameter name="categories" byreference="false" type="array" default=""/>
   </method>
-  <method name="get_products" start="175" end="236" abstract="false" final="false" static="true" visibility="public">
+  <method name="get_products" start="175" end="244" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Ziskaj produkty">Funkcia vrati produkty podla zadaneho mnozstva a kategorie, kategoria ale nie je potrebna.</description>
       <param description="Pocet produktov" type="int" variable="$amount"/>

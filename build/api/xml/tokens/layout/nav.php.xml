@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="nav.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/nav.php" size="1369" time="2019-11-27T15:01:28+01:00" unixtime="1574863288" sha1="6def47b345ff4bc1156fadfeaddb95c6d6e55093" relative="layout/nav.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="nav.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/nav.php" size="1318" time="2019-11-27T17:18:20+01:00" unixtime="1574871500" sha1="dd0578b4faae7955a6c4c94497e2b1afa7e14e78" relative="layout/nav.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -99,16 +99,9 @@
     <token name="T_INLINE_HTML">&lt;nav&gt;</token>
   </line>
   <line no="9">
-    <token name="T_INLINE_HTML">    &lt;p style="color: #fff;"&gt;</token>
-    <token name="T_OPEN_TAG_WITH_ECHO">&lt;?=</token>
-    <token name="T_VARIABLE">$currentPage</token>
-    <token name="T_CLOSE_TAG">?&gt;</token>
-    <token name="T_INLINE_HTML">&lt;/p&gt;</token>
-  </line>
-  <line no="10">
     <token name="T_INLINE_HTML">    &lt;ul class="nav"&gt;</token>
   </line>
-  <line no="11">
+  <line no="10">
     <token name="T_INLINE_HTML">            &lt;li class="nav-item-left"&gt;&lt;a href="../index.php"&gt;</token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_ECHO">echo</token>
@@ -117,7 +110,7 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">&lt;/a&gt;&lt;/li&gt;</token>
   </line>
-  <line no="12">
+  <line no="11">
     <token name="T_INLINE_HTML">            &lt;li </token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_IF">if</token>
@@ -149,11 +142,11 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">&gt;Home&lt;/a&gt;&lt;/li&gt;</token>
   </line>
+  <line no="12"/>
   <line no="13"/>
   <line no="14"/>
   <line no="15"/>
-  <line no="16"/>
-  <line no="17">
+  <line no="16">
     <token name="T_INLINE_HTML">            &lt;li </token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_IF">if</token>
@@ -186,7 +179,7 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">products.php"&gt;Products&lt;/a&gt;&lt;/li&gt;</token>
   </line>
-  <line no="18">
+  <line no="17">
     <token name="T_INLINE_HTML">            &lt;li </token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_IF">if</token>
@@ -219,7 +212,7 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">blog.php"&gt;Blog&lt;/a&gt;&lt;/li&gt;</token>
   </line>
-  <line no="19">
+  <line no="18">
     <token name="T_INLINE_HTML">            &lt;li </token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_IF">if</token>
@@ -252,15 +245,15 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">contact.php"&gt;Contact&lt;/a&gt;&lt;/li&gt;</token>
   </line>
-  <line no="20">
+  <line no="19">
     <token name="T_INLINE_HTML">            &lt;li class="nav-item-right"&gt;&lt;a href="../pages/login.php"&gt;Log In&lt;/a&gt;&lt;/li&gt;</token>
   </line>
-  <line no="21">
+  <line no="20">
     <token name="T_INLINE_HTML">    &lt;/ul&gt;</token>
   </line>
-  <line no="22"/>
-  <line no="23">
+  <line no="21"/>
+  <line no="22">
     <token name="T_INLINE_HTML">&lt;/nav&gt;</token>
   </line>
-  <line no="24"/>
+  <line no="23"/>
 </source>
