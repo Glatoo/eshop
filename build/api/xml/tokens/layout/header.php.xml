@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="header.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/header.php" size="976" time="2019-11-27T17:18:09+01:00" unixtime="1574871489" sha1="fae741f1c1a309343814d065ae2af0ea1cf61ce5" relative="layout/header.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/layout" file="header.php" realpath="C:/xampp/htdocs/eshop/frontend/layout/header.php" size="1049" time="2019-11-27T18:40:41+01:00" unixtime="1574876441" sha1="56d853f09b04b22cb555aadea81e6c5657059e4a" relative="layout/header.php"/>
   <line no="1"/>
   <line no="2"/>
   <line no="3">
@@ -84,15 +84,18 @@
     <token name="T_INLINE_HTML">    &lt;meta charset="utf-8"&gt;</token>
   </line>
   <line no="16">
-    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;</token>
+    <token name="T_INLINE_HTML">    &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;</token>
   </line>
   <line no="17">
-    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="../css/style.css"&gt;</token>
+    <token name="T_INLINE_HTML">    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;</token>
   </line>
   <line no="18">
-    <token name="T_INLINE_HTML">    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap" rel="stylesheet"&gt;</token>
+    <token name="T_INLINE_HTML">    &lt;link rel="stylesheet" href="../css/style.css"&gt;</token>
   </line>
   <line no="19">
+    <token name="T_INLINE_HTML">    &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;display=swap" rel="stylesheet"&gt;</token>
+  </line>
+  <line no="20">
     <token name="T_INLINE_HTML">    &lt;title&gt;</token>
     <token name="T_OPEN_TAG">&lt;?php </token>
     <token name="T_ECHO">echo</token>
@@ -102,20 +105,20 @@
     <token name="T_CLOSE_TAG">?&gt;</token>
     <token name="T_INLINE_HTML">&lt;/title&gt;</token>
   </line>
-  <line no="20">
+  <line no="21">
     <token name="T_INLINE_HTML">&lt;/head&gt;</token>
   </line>
-  <line no="21">
+  <line no="22">
     <token name="T_INLINE_HTML">&lt;body&gt;&lt;!--</token>
   </line>
-  <line no="22">
+  <line no="23">
     <token name="T_INLINE_HTML">&lt;div style="position: fixed; z-index: -99; width: 100%; height: 100%" id="vid"&gt;</token>
   </line>
-  <line no="23">
+  <line no="24">
     <token name="T_INLINE_HTML">   &lt;iframe width="100%" height="120%" src="https://www.youtube.com/embed/BHACKCNDMW8?autoplay=1&amp;controls=0&amp;showinfo=0&amp;autohide=1&amp;hd=1&amp;disablekb=1&amp;mute=1&amp;start=180"&gt;&lt;/iframe&gt;</token>
   </line>
-  <line no="24">
+  <line no="25">
     <token name="T_INLINE_HTML">&lt;/div&gt; --&gt;</token>
   </line>
-  <line no="25"/>
+  <line no="26"/>
 </source>

@@ -3,7 +3,6 @@
 namespace MyLibrary;
 
 use mysqli;
-
 define('ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 include ROOT . "../../common/env.php";
 
@@ -117,18 +116,22 @@ class ProductController
      * Funkcia prida produkt do DB.
      *
      * @param string $name Nazov produktu
-     * @param string $description Popis produktu
-     * @param float $price Cena produktu (v €)
+     * @param float $price Cena produktu (v ?)
+     * @param string $brand Znacka
+     * @param int $size Velkost
+     * @param string $type Druh
      * @param string $image Obrazok produktu
-     * @param array $categories Pole kategorii
+     * @param string $description Popis produktu
      * @return int Vraciam status:
      *       1 Produkt bol pridany
      *      -1 Chybajuce data
      *      -2 Neplatne (prazdne udaje)
      *      -3 Pripojenie zlyhalo
      *      -4 Zlyhalo pripravenie SQL pri produktu.
+     *      -5 Produkt uz existuje
+     *      -6 Nepodarilo sa vykonat sql
      */
-    public static function add_product($name, $description, $price, $image = "none.jpg", $categories = [])
+    public static function add_product($name, $price, $brand, $size, $type, $image = "none.jpg", $description="")
     {
         if (!isset($name) || !isset($description) || !isset($price)) {
             return -1;
@@ -141,18 +144,28 @@ class ProductController
             echo $conn->connect_error;
             return -3;
         }
-        $categories_str = $categories[0];
-        for ($i = 1; $i < count($categories); $i++) {
-            $categories_str .= "," . $categories[$i];
-        }
-        if ($stmt = $conn->prepare("INSERT INTO products (name, description, price, image, categories) VALUES (?,?,?,?,?)")) {
-            $stmt->bind_param("ssdss", $name, $description, $price, $image, $categories_str);
+        if ($stmt = $conn->prepare("SELECT * FROM products WHERE name = ? ")) {
+            $stmt->bind_param("s",$name);
 
             $stmt->execute();
+            $res = $stmt->get_result();
+            if($res->num_rows > 0){
+                $stmt->close();
+                $conn->close();
+                return -5;
+            }else{
+                if($stmt = $conn->prepare("INSERT INTO products (name, description, size, brand, type, price, image) VALUES (?, ?, ?, ? ,? ,? ,?)")){
+                    $stmt->bind_param("ssissds", $name, $description, $size, $brand, $type, $price, $image);
+                    $stmt->execute();
+                    $res = $stmt->get_result();
+                    if($res) {
+                        return 1;
+                    }else{
+                        return -6;
+                    }
+                }
+            }
 
-            $stmt->close();
-            $conn->close();
-            return 1;
         } else {
             echo $conn->error;
             echo $stmt->error;
@@ -179,9 +192,6 @@ class ProductController
             echo $conn->connect_error;
             return [];
         }
-
-
-
         $sql_str = "SELECT name, description, price, brand, image, size, type FROM products ";
         $where_start = false;
         if ($type != []) {
@@ -199,7 +209,7 @@ class ProductController
                 $size_str.= "') OR (size ='".$size[$i];
             }
             if (!$where_start) {
-                $sql_str .= "WHERE ((size='" . $size_str."'))'";
+                $sql_str .= "WHERE ((size='" . $size_str."'))";
                 $where_start = true;
             } else {
                 $sql_str .= " AND( (size = '" . $size_str."'))";
@@ -232,14 +242,20 @@ class ProductController
                 $sql_str.="AND( (brand ='" . $brand_str."'))";
             }
         }
-        echo "<p style='color: #fff;'>".$sql_str."</p>";
-        $res = $conn->query($sql_str);
-
-        $products = array();
-        while ($row = $res->fetch_row()) {
-            array_push($products, $row);
+        //echo "<p style='color: #000;'>".$sql_str."</p>";
+        if( $res = $conn->query($sql_str)){
+            $products = array();
+            while ($row = $res->fetch_row()) {
+                array_push($products, $row);
+            }
+            $conn->close();
+            return $products;
         }
-        $conn->close();
-        return $products;
+        else{
+            echo "Error";
+            $conn->close();
+            return [];
+        }
+
     }
 }

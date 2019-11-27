@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/pages" file="products.php" realpath="C:/xampp/htdocs/eshop/frontend/pages/products.php" size="3418" time="2019-11-27T17:18:09+01:00" unixtime="1574871489" sha1="22afb5abff7c6ad5b36012439bb362ace520b0d2" relative="pages/products.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/pages" file="products.php" realpath="C:/xampp/htdocs/eshop/frontend/pages/products.php" size="3431" time="2019-11-27T18:43:45+01:00" unixtime="1574876625" sha1="f4f8ce8ac866eaf28aa04a4c85cb6f0d05d1554f" relative="pages/products.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -486,7 +486,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$product</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
-    <token name="T_LNUMBER">3</token>
+    <token name="T_LNUMBER">4</token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
@@ -517,10 +517,13 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">utf8_encode</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_VARIABLE">$product</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
     <token name="T_LNUMBER">1</token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_WHITESPACE"> </token>

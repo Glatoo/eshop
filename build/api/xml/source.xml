@@ -3,20 +3,20 @@
   <dir name="C:/xampp/htdocs/eshop/frontend">
     <dir name="controllers">
       <file name="blogController.php" size="1146" time="2019-11-27T13:22:06+01:00" unixtime="1574857326" sha1="c446ab8f9d792e8dc83b6cdc18d0dac475df05e5" xml="tokens/controllers/blogController.php.xml"/>
-      <file name="productsController.php" size="7894" time="2019-11-27T17:12:07+01:00" unixtime="1574871127" sha1="85a6b09512abdd3c15df81a9f3f2443da8eb8797" xml="tokens/controllers/productsController.php.xml"/>
+      <file name="productsController.php" size="8295" time="2019-11-27T19:00:37+01:00" unixtime="1574877637" sha1="8871091bdc7b40f85652e73e3eef07494befbf1f" xml="tokens/controllers/productsController.php.xml"/>
       <file name="userController.php" size="4258" time="2019-11-27T13:23:55+01:00" unixtime="1574857435" sha1="076f0dfd82f61c3315257f9396ca3fdf822a5dbd" xml="tokens/controllers/userController.php.xml"/>
     </dir>
     <file name="index.php" size="865" time="2019-11-27T14:05:34+01:00" unixtime="1574859934" sha1="c5a82d750c7b85d4bc58e3a3bac628bd1c096a1b" xml="tokens/index.php.xml"/>
     <dir name="layout">
       <file name="footer.php" size="132" time="2019-11-25T18:39:11+01:00" unixtime="1574703551" sha1="fa1a483c53860e5f4b20a326b3d311f674df2aaf" xml="tokens/layout/footer.php.xml"/>
-      <file name="header.php" size="976" time="2019-11-27T17:18:09+01:00" unixtime="1574871489" sha1="fae741f1c1a309343814d065ae2af0ea1cf61ce5" xml="tokens/layout/header.php.xml"/>
+      <file name="header.php" size="1049" time="2019-11-27T18:40:41+01:00" unixtime="1574876441" sha1="56d853f09b04b22cb555aadea81e6c5657059e4a" xml="tokens/layout/header.php.xml"/>
       <file name="nav.php" size="1318" time="2019-11-27T17:18:20+01:00" unixtime="1574871500" sha1="dd0578b4faae7955a6c4c94497e2b1afa7e14e78" xml="tokens/layout/nav.php.xml"/>
     </dir>
     <dir name="pages">
       <file name="blog.php" size="982" time="2019-11-27T14:39:22+01:00" unixtime="1574861962" sha1="114e4a7e47bf48c115dd654d1e19c85407307c8f" xml="tokens/pages/blog.php.xml"/>
       <file name="contact.php" size="194" time="2019-11-27T14:39:41+01:00" unixtime="1574861981" sha1="189cc2e28f88bdbf503c60f755314ae137049057" xml="tokens/pages/contact.php.xml"/>
       <file name="login.php" size="2009" time="2019-11-27T14:39:50+01:00" unixtime="1574861990" sha1="315406c98fd13005571a3cfa0626e31908b6638d" xml="tokens/pages/login.php.xml"/>
-      <file name="products.php" size="3418" time="2019-11-27T17:18:09+01:00" unixtime="1574871489" sha1="22afb5abff7c6ad5b36012439bb362ace520b0d2" xml="tokens/pages/products.php.xml"/>
+      <file name="products.php" size="3431" time="2019-11-27T18:43:45+01:00" unixtime="1574876625" sha1="f4f8ce8ac866eaf28aa04a4c85cb6f0d05d1554f" xml="tokens/pages/products.php.xml"/>
       <file name="register.php" size="1909" time="2019-11-27T14:20:36+01:00" unixtime="1574860836" sha1="2027b08c897787e362992506ba04ca879d2fff2b" xml="tokens/pages/register.php.xml"/>
       <file name="shops.php" size="203" time="2019-11-27T14:20:36+01:00" unixtime="1574860836" sha1="4f330e681cfbc8cfcc8fcb2f9467cffb5588a704" xml="tokens/pages/shops.php.xml"/>
       <file name="test.php" size="5812" time="2019-11-27T14:21:06+01:00" unixtime="1574860866" sha1="fb8ce202a1407f00a6910bd59c092d4fd17ac52a" xml="tokens/pages/test.php.xml"/>

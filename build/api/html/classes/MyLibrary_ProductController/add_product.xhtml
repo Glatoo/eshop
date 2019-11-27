@@ -59,7 +59,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/controllers/productsController.php.xhtml#line131">Source</a>
+            <a href="../../source/controllers/productsController.php.xhtml#line134">Source</a>
           </li>
         </ul>
       </nav>
@@ -72,14 +72,18 @@
         <div class="styled synopsis">
           <code>public function add_product(string
         $name,
-            string
-        $description,
             float
         $price,
+            string
+        $brand,
+            int
+        $size,
+            string
+        $type,
             [string
         $image = "none.jpg",
-            [array
-        $categories = ]] )
+            [string
+        $description = ""]] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
@@ -88,22 +92,30 @@
                 —
                 string</dt>
           <dd>Nazov produktu</dd>
-          <dt><code>$description</code>
-                —
-                string</dt>
-          <dd>Popis produktu</dd>
           <dt><code>$price</code>
                 —
                 float</dt>
-          <dd>Cena produktu (v €)</dd>
+          <dd>Cena produktu (v ?)</dd>
+          <dt><code>$brand</code>
+                —
+                string</dt>
+          <dd>Znacka</dd>
+          <dt><code>$size</code>
+                —
+                int</dt>
+          <dd>Velkost</dd>
+          <dt><code>$type</code>
+                —
+                string</dt>
+          <dd>Druh</dd>
           <dt><code>$image</code>
                 —
                 string</dt>
           <dd>Obrazok produktu</dd>
-          <dt><code>$categories</code>
+          <dt><code>$description</code>
                 —
-                array</dt>
-          <dd>Pole kategorii</dd>
+                string</dt>
+          <dd>Popis produktu</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
@@ -112,7 +124,9 @@
      -1 Chybajuce data
      -2 Neplatne (prazdne udaje)
      -3 Pripojenie zlyhalo
-     -4 Zlyhalo pripravenie SQL pri produktu.</dd>
+     -4 Zlyhalo pripravenie SQL pri produktu.
+     -5 Produkt uz existuje
+     -6 Nepodarilo sa vykonat sql</dd>
         </dl>
       </section>
     </div>

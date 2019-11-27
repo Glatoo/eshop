@@ -57,9 +57,9 @@ include "../controllers/productsController.php"
             foreach ($products as $index => $product) {
                 $index++;
                 echo "<div class='product-container'>";
-                echo "<img class='product-img' src='../img/". $product[3]."'>" ;
+                echo "<img class='product-img' src='../img/". $product[4]."'>" ;
                 echo "<h1 class='product-header'>". $product[0]. "</h1>";
-                echo "<p class='product-description'>" . $product[1] . "</p>";
+                echo "<p class='product-description'>" . utf8_encode($product[1]) . "</p>";
                 echo "<p class='product-price'>" . $product[2] . ",-</p><br>";
                 echo "<button class='button-buy'>LEARN MORE</button>";
                 echo "</div>";
