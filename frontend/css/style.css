@@ -401,7 +401,7 @@ article {
 .product-container{
     background-color: white;
     width: 250px;
-    border-radius: 10%;
+    border-radius: 35px;
     border-bottom: 0 none;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.46);
     text-align: center;
@@ -476,4 +476,35 @@ article {
     flex-wrap: wrap;
     display:flex;
     justify-content: space-evenly;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+}
+.filters span{
+    margin: 1em;
+}
+
+.filters span:hover{
+    cursor: pointer;
+}
+
+.filter-items{
+    position: absolute;
+    display: none;
+    flex-wrap: wrap;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: space-evenly;
+}
+
+.filter-items-border{
+    border: solid 1px #d5d5d5;
+    padding: 5px 10px;
+    margin: 10px;
+}
+
+.filter-items-border:hover{
+    border: solid 1px #8f8f8f;
 }

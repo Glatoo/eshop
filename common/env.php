@@ -1,6 +1,6 @@
 <?php
 $title = "B-Shop";
-$store_name = "B-Shop";
+$store_name = "Janoš Hozza Store";
 $announcement = "Important announcement";
 
 define("time_zone","Europe/Bratislava");

@@ -3,42 +3,58 @@ include "../layout/header.php";
 include "../layout/nav.php";
 include "../controllers/productsController.php"
 ?>
-<article style="background-color: #E2E2E2;">
+<article style="background-color: #ffffff;">
     <section>
         <h1 class="products-header">PRODUCTS</h1>
-        <form action="products.php" style="color: white; background-color: black; margin-top: -19px;" method="post">
-            <h1 style="color: #fff;">Category Search</h1>
-            <h2 style="color: white">Brand</h2>
+        <form action="products.php" style="color: #000000; background-color: #ffffff; margin-top: -19px;" method="post">
+            <div class="filters">
+                <span class="filter-opener" id="brand" onclick="openFilter(id);">Brand</span>
+                <span class="filter-opener" id="size" onclick="openFilter(id);">Size</span>
+                <span class="filter-opener" id="type" onclick="openFilter(id);">Type</span>
+                <span class="filter-opener" id="price" onclick="openFilter(id);">Price</span>
+            </div>
             <?php
             $sub_cat = "Brand";
             $categories = MyLibrary\ProductController::get_categories($sub_cat);
+            echo "<div class='filter-items' id='brand_sub'>";
             foreach ($categories as $category){
+                echo "<div class='filter-items-border'>";
                 echo "<label for='".$category."'>".$category."</label>";
                 echo "<input value='".$category."' id='".$category."' type='checkbox' name='brand[]'>";
                 echo "<br>";
+                echo "</div>";
             }
+            echo "</div>";
             ?>
-            <h2 style="color: white">Size</h2>
+
             <?php
             $sub_cat = "Size";
             $categories = MyLibrary\ProductController::get_categories($sub_cat);
+            echo "<div class='filter-items' id='size_sub'>";
             foreach ($categories as $category){
-            echo "<label for='".$category."'>".$category."</label>";
-            echo "<input value='".$category."' id='".$category."' type='checkbox' name='size[]'>";
-            echo "<br>";
+                echo "<div class='filter-items-border'>";
+                echo "<label for='".$category."'>".$category."</label>";
+                echo "<input value='".$category."' id='".$category."' type='checkbox' name='size[]'>";
+                echo "<br>";
+                echo "</div>";
             }
+            echo "</div>";
             ?>
-            <h2 style="color: white">Type</h2>
+
             <?php
             $sub_cat = "Type";
             $categories = MyLibrary\ProductController::get_categories($sub_cat);
+            echo "<div class='filter-items' id='type_sub'>";
             foreach ($categories as $category){
+                echo "<div class='filter-items-border'>";
                 echo "<label for='".$category."'>".$category."</label>";
                 echo "<input value='".$category."' id='".$category."' type='checkbox' name='type[]'>";
                 echo "<br>";
+                echo "</div>";
             }
+            echo "</div>";
             ?>
-            <h2 style="color: white">Price</h2>
+
             <label for="min_price">Minimal price: </label>
             <input type="number" name="min_price" id="min_price">
             <label for="max_price">Maximum price: </label>
@@ -57,16 +73,16 @@ include "../controllers/productsController.php"
             foreach ($products as $index => $product) {
                 $index++;
                 echo "<div class='product-container'>";
-                echo "<img class='product-img' src='../img/". $product[3]."'>" ;
+                echo "<img class='product-img' src='../img/". $product[4]."'>" ;
                 echo "<h1 class='product-header'>". $product[0]. "</h1>";
                 echo "<p class='product-description'>" . $product[1] . "</p>";
                 echo "<p class='product-price'>" . $product[2] . ",-</p><br>";
+                echo "<p class='product-size'>"."</p><br>";
                 echo "<button class='button-buy'>LEARN MORE</button>";
                 echo "</div>";
             }
         echo "</div>";
         ?>
-        <p>products</p>
     </section>
 </article>
 
