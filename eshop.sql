@@ -56,17 +56,11 @@ INSERT INTO `admins` (`id`, `username`, `firstname`, `surname`, `email`, `addres
 CREATE TABLE `admin_tokens` (
   `id` int(11) NOT NULL,
   `token` text COLLATE utf8_slovak_ci NOT NULL,
-  `create_date` date NOT NULL DEFAULT current_timestamp(),
+  `create_date` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
   `expiration_date` date NOT NULL,
   `privileges` varchar(200) COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
---
--- Sťahujem dáta pre tabuľku `admin_tokens`
---
-
-INSERT INTO `admin_tokens` (`id`, `token`, `create_date`, `expiration_date`, `privileges`) VALUES
-(1, 'abc123', '2019-11-14', '2019-11-23', '1,2,5,7');
 
 -- --------------------------------------------------------
 
@@ -86,10 +80,6 @@ CREATE TABLE `blog` (
 -- Sťahujem dáta pre tabuľku `blog`
 --
 
-INSERT INTO `blog` (`id`, `title`, `content`, `author`, `date`) VALUES
-(1, 'Kto je frajer dneska?', 'Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?Kto je frajer dneska?', 'PTere Johnas', '2019-11-25 18:31:26');
-
--- --------------------------------------------------------
 
 --
 -- Štruktúra tabuľky pre tabuľku `categories`
@@ -100,16 +90,7 @@ CREATE TABLE `categories` (
   `name` varchar(200) COLLATE utf8_slovak_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
---
--- Sťahujem dáta pre tabuľku `categories`
---
 
-INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Adidas'),
-(2, 'Nike'),
-(3, 'Shoes'),
-(4, 'T-shirt'),
-(5, 'Puma');
 
 -- --------------------------------------------------------
 

@@ -7,7 +7,7 @@ include "../controllers/productsController.php"
     <section>
         <h1>Products:</h1>
         <form action="products.php" style="color: white" method="post">
-            <h1 style="color: #fff;">Search</h1>
+            <h1 style="color: #fff;">Category Search</h1>
             <?php
             $categories = MyLibrary\ProductController::get_categories();
             foreach ($categories as $category){
@@ -21,7 +21,6 @@ include "../controllers/productsController.php"
         </form>
         <?php
         if (!empty($_POST["category"])) {
-            echo "<p style='color: white'>".json_encode($_POST["category"])."</p>";
             $products = MyLibrary\ProductController::get_products(20, $_POST["category"]);
         }else{
             $products = MyLibrary\ProductController::get_products(20);
@@ -33,7 +32,7 @@ include "../controllers/productsController.php"
                 echo "<h1 class='product-header'>" . $index .". ". $product[0]. "</h1>";
                 echo "<p class='product-description'>" . $product[1] . "</p>";
                 echo "<i class='product-price'>" . $product[2] . "</i><br>";
-                echo "<p class='product-img'>" . $product[3] . "</p>";
+                echo "<img class='product-img' width=200 height=100 src='../img/". $product[3]."'>" ;
                 echo "</div>";
             }
         ?>

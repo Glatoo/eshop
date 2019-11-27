@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="14" end="129">
-  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="4158" time="2019-11-26T20:29:37+01:00" unixtime="1574796577" sha1="e683326c4ff77fdd4b412706e6e448f5610c09be" relative="controllers/productsController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="20" end="189">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="6041" time="2019-11-27T13:20:42+01:00" unixtime="1574857242" sha1="c953bbbdcf26241555e2dd3844a0d038a29ec34a" relative="controllers/productsController.php"/>
   <docblock>
-    <description compact="Hlavna trieda pre produkty"/>
-    <author value="Branislav Hozza"/>
+    <description compact="Kontroler produktov">Hlavna trieda pre produkty</description>
+    <author value="Branislav Hozza &lt;brankohozza@gmail.com&gt;"/>
     <copyright value="Branislav Hozza, All rights reserved."/>
     <license name="No License"/>
     <link value="http://brano-shop.test"/>
   </docblock>
-  <method name="add_category" start="30" end="74" abstract="false" final="false" static="true" visibility="public">
+  <method name="add_category" start="38" end="82" abstract="false" final="false" static="true" visibility="public">
     <docblock>
-      <description compact="Funkcia prida categoriu do DB."/>
+      <description compact="Pridanie novej kategorie">Funkcia prida novu categoriu do DB a overi existenciu kategorie.</description>
       <param description="Nazov kategorie." type="string" variable="$name"/>
-      <return description="Vraciam status:\n" type="int">1  Spravny vystup
+      <return description="Vraciam status:" type="int">1 Kategoria bola pridana
      -1 Chybajuce data
      -2 Neplatne (prazdne udaje)
      -3 Pripojenie zlyhalo
@@ -22,15 +22,35 @@
     </docblock>
     <parameter name="name" byreference="false" type="{unknown}"/>
   </method>
-  <method name="get_categories" start="81" end="95" abstract="false" final="false" static="true" visibility="public">
+  <method name="get_categories" start="91" end="105" abstract="false" final="false" static="true" visibility="public">
     <docblock>
-      <description compact="Funkcia vrati kategorie"/>
+      <description compact="Ziskaj kategorie">Funkcia vrati kategorie</description>
       <return description="Vraciam pole kategorii alebo prazdne pole:" type="array"/>
     </docblock>
   </method>
-  <method name="get_products" start="104" end="128" abstract="false" final="false" static="true" visibility="public">
+  <method name="add_product" start="124" end="154" abstract="false" final="false" static="true" visibility="public">
     <docblock>
-      <description compact="Funkcia vracia produkty"/>
+      <description compact="Pridaj produkt">Funkcia prida produkt do DB.</description>
+      <param description="Nazov produktu" type="string" variable="$name"/>
+      <param description="Popis produktu" type="string" variable="$description"/>
+      <param description="Cena produktu (v €)" type="float" variable="$price"/>
+      <param description="Obrazok produktu" type="string" variable="$image"/>
+      <param description="Pole kategorii" type="array" variable="$categories"/>
+      <return description="Vraciam status:" type="int">1 Produkt bol pridany
+     -1 Chybajuce data
+     -2 Neplatne (prazdne udaje)
+     -3 Pripojenie zlyhalo
+     -4 Zlyhalo pripravenie SQL pri produktu.</return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="description" byreference="false" type="{unknown}"/>
+    <parameter name="price" byreference="false" type="{unknown}"/>
+    <parameter name="image" byreference="false" type="string" default="&quot;none.jpg&quot;"/>
+    <parameter name="categories" byreference="false" type="array" default=""/>
+  </method>
+  <method name="get_products" start="165" end="188" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Ziskaj produkty">Funkcia vrati produkty podla zadaneho mnozstva a kategorie, kategoria ale nie je potrebna.</description>
       <param description="Pocet produktov" type="int" variable="$amount"/>
       <param description="Pole vybratych kategorii" type="array" variable="$categories"/>
       <return description="Vraciam pole produktov. Ak prazdne pole tak nastala chyba alebo produkt neexistuje" type="array"/>

@@ -1,12 +1,18 @@
 <?php
+
 namespace MyLibrary;
+
 use mysqli;
+
 define('ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 include ROOT . "../../common/env.php";
+
 /**
+ * Kontroler blogov
+ *
  * Hlavna trieda pre blogy
  *
- * @author     Branislav Hozza
+ * @author     Branislav Hozza <brankohozza@gmail.com>
  * @copyright  Branislav Hozza, All rights reserved.
  * @license    No License
  * @link       http://brano-shop.test
@@ -14,13 +20,15 @@ include ROOT . "../../common/env.php";
 class BlogController
 {
     /**
-     * Funkcia vrati clanky
+     * Ziskaj clanky
+     *
+     * Funkcia vrati clanky podla mnozstva
      *
      * @param int $ammount Pocet zobrazenych clankov
      *
      * @return array Vraciam pole clankov alebo prazdne pole:
      */
-    static function get_articles($ammount)
+    public static function get_articles($ammount)
     {
         $conn = new mysqli(DB_server, DB_username, DB_password, DB_name);
         if ($conn->connect_error) {

@@ -1,6 +1,8 @@
 <?php
-include "layout/header.php";
-include "layout/nav.php";
+define("ROOT_DIR", __DIR__);
+define(ROOT_DIR, realpath(__DIR__ . '/..'));
+include ROOT_DIR.'/layout/header.php';
+include ROOT_DIR.'/layout/nav.php';
 ?>
 
 
@@ -27,4 +29,4 @@ include "layout/nav.php";
 
 </section>
 <?php
-include "layout/footer.php";
+include ROOT_DIR."/layout/footer.php";

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\BlogController" namespace="MyLibrary" name="BlogController" abstract="false" final="false" start="14" end="38">
-  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="blogController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/blogController.php" size="1037" time="2019-11-26T20:30:03+01:00" unixtime="1574796603" sha1="56555e1570997b30b10980637e6bd11890523a63" relative="controllers/blogController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\BlogController" namespace="MyLibrary" name="BlogController" abstract="false" final="false" start="20" end="46">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="blogController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/blogController.php" size="1146" time="2019-11-27T13:22:06+01:00" unixtime="1574857326" sha1="c446ab8f9d792e8dc83b6cdc18d0dac475df05e5" relative="controllers/blogController.php"/>
   <docblock>
-    <description compact="Hlavna trieda pre blogy"/>
-    <author value="Branislav Hozza"/>
+    <description compact="Kontroler blogov">Hlavna trieda pre blogy</description>
+    <author value="Branislav Hozza &lt;brankohozza@gmail.com&gt;"/>
     <copyright value="Branislav Hozza, All rights reserved."/>
     <license name="No License"/>
     <link value="http://brano-shop.test"/>
   </docblock>
-  <method name="get_articles" start="23" end="37" abstract="false" final="false" static="true" visibility="public">
+  <method name="get_articles" start="31" end="45" abstract="false" final="false" static="true" visibility="public">
     <docblock>
-      <description compact="Funkcia vrati clanky"/>
+      <description compact="Ziskaj clanky">Funkcia vrati clanky podla mnozstva</description>
       <param description="Pocet zobrazenych clankov" type="int" variable="$ammount"/>
       <return description="Vraciam pole clankov alebo prazdne pole:" type="array"/>
     </docblock>

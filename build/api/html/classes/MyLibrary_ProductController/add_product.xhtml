@@ -2,7 +2,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
-    <title>phpDox - MyLibrary\ProductController::get_products</title>
+    <title>phpDox - MyLibrary\ProductController::add_product</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css" media="screen"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
   </head>
@@ -41,7 +41,7 @@
           <li class="separator">
             <a title="MyLibrary\ProductController" href="../../classes/MyLibrary_ProductController.xhtml">ProductController</a>
           </li>
-          <li class="separator">get_products</li>
+          <li class="separator">add_product</li>
         </ul>
       </div>
       <nav class="box">
@@ -59,38 +59,60 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/controllers/productsController.php.xhtml#line165">Source</a>
+            <a href="../../source/controllers/productsController.php.xhtml#line124">Source</a>
           </li>
         </ul>
       </nav>
       <section>
-        <h1><small>MyLibrary\ProductController::</small>get_products</h1>
-        <h4>Ziskaj produkty</h4>
-        <p>Funkcia vrati produkty podla zadaneho mnozstva a kategorie, kategoria ale nie je potrebna.</p>
+        <h1><small>MyLibrary\ProductController::</small>add_product</h1>
+        <h4>Pridaj produkt</h4>
+        <p>Funkcia prida produkt do DB.</p>
         <ul/>
         <h2 id="signature">Signature</h2>
         <div class="styled synopsis">
-          <code>public function get_products(int
-        $amount,
+          <code>public function add_product(string
+        $name,
+            string
+        $description,
+            float
+        $price,
+            [string
+        $image = "none.jpg",
             [array
-        $categories = NULL] )
+        $categories = ]] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
         <dl class="styled">
-          <dt><code>$amount</code>
+          <dt><code>$name</code>
                 —
-                int</dt>
-          <dd>Pocet produktov</dd>
+                string</dt>
+          <dd>Nazov produktu</dd>
+          <dt><code>$description</code>
+                —
+                string</dt>
+          <dd>Popis produktu</dd>
+          <dt><code>$price</code>
+                —
+                float</dt>
+          <dd>Cena produktu (v €)</dd>
+          <dt><code>$image</code>
+                —
+                string</dt>
+          <dd>Obrazok produktu</dd>
           <dt><code>$categories</code>
                 —
                 array</dt>
-          <dd>Pole vybratych kategorii</dd>
+          <dd>Pole kategorii</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">
-          <dt>array</dt>
-          <dd>Vraciam pole produktov. Ak prazdne pole tak nastala chyba alebo produkt neexistuje</dd>
+          <dt>int</dt>
+          <dd>Vraciam status:<br/>1 Produkt bol pridany
+     -1 Chybajuce data
+     -2 Neplatne (prazdne udaje)
+     -3 Pripojenie zlyhalo
+     -4 Zlyhalo pripravenie SQL pri produktu.</dd>
         </dl>
       </section>
     </div>

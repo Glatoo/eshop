@@ -1,6 +1,6 @@
 <?php
-include "../layout/header.php";
-include "../layout/nav.php";
+include "./layout/header.php";
+include "./layout/nav.php";
 ?>
     <article>
         <div class="container">
@@ -39,4 +39,4 @@ include "../layout/nav.php";
     </article>
 
 <?php
-include "../layout/footer.php";
+include "./layout/footer.php";

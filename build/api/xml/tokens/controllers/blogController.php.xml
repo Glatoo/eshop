@@ -1,22 +1,25 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/controllers" file="blogController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/blogController.php" size="1037" time="2019-11-26T20:30:03+01:00" unixtime="1574796603" sha1="56555e1570997b30b10980637e6bd11890523a63" relative="controllers/blogController.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/controllers" file="blogController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/blogController.php" size="1146" time="2019-11-27T13:22:06+01:00" unixtime="1574857326" sha1="c446ab8f9d792e8dc83b6cdc18d0dac475df05e5" relative="controllers/blogController.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
-  <line no="2">
+  <line no="2"/>
+  <line no="3">
     <token name="T_NAMESPACE">namespace</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">MyLibrary</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="3">
+  <line no="4"/>
+  <line no="5">
     <token name="T_USE">use</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">mysqli</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="4">
+  <line no="6"/>
+  <line no="7">
     <token name="T_STRING">define</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_CONSTANT_ENCAPSED_STRING">'ROOT'</token>
@@ -33,7 +36,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="5">
+  <line no="8">
     <token name="T_INCLUDE">include</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">ROOT</token>
@@ -43,62 +46,77 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"../../common/env.php"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="6">
+  <line no="9"/>
+  <line no="10">
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="7">
-    <token name="T_DOC_COMMENT"> * Hlavna trieda pre blogy</token>
-  </line>
-  <line no="8">
-    <token name="T_DOC_COMMENT"> *</token>
-  </line>
-  <line no="9">
-    <token name="T_DOC_COMMENT"> * @author     Branislav Hozza</token>
-  </line>
-  <line no="10">
-    <token name="T_DOC_COMMENT"> * @copyright  Branislav Hozza, All rights reserved.</token>
-  </line>
   <line no="11">
-    <token name="T_DOC_COMMENT"> * @license    No License</token>
+    <token name="T_DOC_COMMENT"> * Kontroler blogov</token>
   </line>
   <line no="12">
-    <token name="T_DOC_COMMENT"> * @link       http://brano-shop.test</token>
+    <token name="T_DOC_COMMENT"> *</token>
   </line>
   <line no="13">
-    <token name="T_DOC_COMMENT"> */</token>
+    <token name="T_DOC_COMMENT"> * Hlavna trieda pre blogy</token>
   </line>
   <line no="14">
+    <token name="T_DOC_COMMENT"> *</token>
+  </line>
+  <line no="15">
+    <token name="T_DOC_COMMENT"> * @author     Branislav Hozza &lt;brankohozza@gmail.com&gt;</token>
+  </line>
+  <line no="16">
+    <token name="T_DOC_COMMENT"> * @copyright  Branislav Hozza, All rights reserved.</token>
+  </line>
+  <line no="17">
+    <token name="T_DOC_COMMENT"> * @license    No License</token>
+  </line>
+  <line no="18">
+    <token name="T_DOC_COMMENT"> * @link       http://brano-shop.test</token>
+  </line>
+  <line no="19">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="20">
     <token name="T_CLASS">class</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">BlogController</token>
   </line>
-  <line no="15">
+  <line no="21">
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="16">
+  <line no="22">
     <token name="T_WHITESPACE">    </token>
     <token name="T_DOC_COMMENT">/**</token>
   </line>
-  <line no="17">
-    <token name="T_DOC_COMMENT">     * Funkcia vrati clanky</token>
+  <line no="23">
+    <token name="T_DOC_COMMENT">     * Ziskaj clanky</token>
   </line>
-  <line no="18">
+  <line no="24">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="19">
+  <line no="25">
+    <token name="T_DOC_COMMENT">     * Funkcia vrati clanky podla mnozstva</token>
+  </line>
+  <line no="26">
+    <token name="T_DOC_COMMENT">     *</token>
+  </line>
+  <line no="27">
     <token name="T_DOC_COMMENT">     * @param int $ammount Pocet zobrazenych clankov</token>
   </line>
-  <line no="20">
+  <line no="28">
     <token name="T_DOC_COMMENT">     *</token>
   </line>
-  <line no="21">
+  <line no="29">
     <token name="T_DOC_COMMENT">     * @return array Vraciam pole clankov alebo prazdne pole:</token>
   </line>
-  <line no="22">
+  <line no="30">
     <token name="T_DOC_COMMENT">     */</token>
   </line>
-  <line no="23">
+  <line no="31">
     <token name="T_WHITESPACE">    </token>
+    <token name="T_PUBLIC">public</token>
+    <token name="T_WHITESPACE"> </token>
     <token name="T_STATIC">static</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_FUNCTION">function</token>
@@ -108,11 +126,11 @@
     <token name="T_VARIABLE">$ammount</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="24">
+  <line no="32">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="25">
+  <line no="33">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$conn</token>
     <token name="T_WHITESPACE"> </token>
@@ -135,7 +153,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="26">
+  <line no="34">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
@@ -147,7 +165,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="27">
+  <line no="35">
     <token name="T_WHITESPACE">            </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -156,7 +174,7 @@
     <token name="T_STRING">connect_error</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="28">
+  <line no="36">
     <token name="T_WHITESPACE">            </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -164,11 +182,11 @@
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="29">
+  <line no="37">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="30">
+  <line no="38">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$res</token>
     <token name="T_WHITESPACE"> </token>
@@ -186,7 +204,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="31">
+  <line no="39">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$articles</token>
     <token name="T_WHITESPACE"> </token>
@@ -197,7 +215,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="32">
+  <line no="40">
     <token name="T_WHITESPACE">        </token>
     <token name="T_WHILE">while</token>
     <token name="T_WHITESPACE"> </token>
@@ -215,7 +233,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="33">
+  <line no="41">
     <token name="T_WHITESPACE">            </token>
     <token name="T_STRING">array_push</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
@@ -226,11 +244,11 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="34">
+  <line no="42">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="35">
+  <line no="43">
     <token name="T_WHITESPACE">        </token>
     <token name="T_VARIABLE">$conn</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
@@ -239,18 +257,18 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="36">
+  <line no="44">
     <token name="T_WHITESPACE">        </token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$articles</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="37">
+  <line no="45">
     <token name="T_WHITESPACE">    </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="38">
+  <line no="46">
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
 </source>

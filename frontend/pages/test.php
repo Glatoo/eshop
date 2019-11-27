@@ -1,7 +1,7 @@
 <?php
-include "../layout/header.php";
-include "../layout/nav.php";
-include "../controllers/userController.php";
+include "./layout/header.php";
+include "./layout/nav.php";
+include "./controllers/userController.php";
 if(isset($_POST["login"])){
     $status = login($_POST["username"], $_POST["password"]);
     if($status == -1){
@@ -24,7 +24,7 @@ if(isset($_POST["login"])){
     }
 }
 if(isset($_POST["register"])){
-    $status = register($_POST["username"], $_POST["name"], $_POST["surname"], $_POST["address"], $_POST["email"],$_POST["password"]);
+    $status = MyLibrary\UserController::register($_POST["username"], $_POST["name"], $_POST["surname"], $_POST["address"], $_POST["email"],$_POST["password"]);
     if($status == -1){
         echo "Chybajuce data";
     }
@@ -135,4 +135,4 @@ if(isset($_POST["register"])){
     </article>
 
 <?php
-include "../layout/footer.php";
+include "./layout/footer.php";

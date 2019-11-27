@@ -1,12 +1,18 @@
 <?php
+
 namespace MyLibrary;
+
 use mysqli;
+
 define('ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 include ROOT . "../../common/env.php";
+
 /**
+ * Kontroler uzivatela
+ *
  * Hlavna trieda pre uzivatela
  *
- * @author     Branislav Hozza
+ * @author     Branislav Hozza <brankohozza@gmail.com>
  * @copyright  Branislav Hozza, All rights reserved.
  * @license    No License
  * @link       http://brano-shop.test
@@ -14,6 +20,8 @@ include ROOT . "../../common/env.php";
 class UserController
 {
     /**
+     * Prihlasenie
+     *
      * Funkcia pre prihlasenie
      *
      * @param string $name Pouzivatelove meno
@@ -54,7 +62,10 @@ class UserController
     }
 
     /**
+     * Registracia
+     *
      * Funkcia registruje noveho uzivatela
+     *
      * @param string $username Pouzivatelske meno
      * @param string $firstname Prve meno
      * @param string $surname Priezvisko

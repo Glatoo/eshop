@@ -1,5 +1,8 @@
 {
-    "require-dev": {
-        "theseer/phpdox": "^0.12.0"
-    }
+  "require-dev": {
+    "theseer/phpdox": "^0.12.0"
+  },
+  "require": {
+    "ext-mysqli": "*"
+  }
 }
