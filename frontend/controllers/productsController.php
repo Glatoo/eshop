@@ -3,6 +3,7 @@
 namespace MyLibrary;
 
 use mysqli;
+
 define('ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 include ROOT . "../../common/env.php";
 
@@ -127,11 +128,12 @@ class ProductController
      *      -1 Chybajuce data
      *      -2 Neplatne (prazdne udaje)
      *      -3 Pripojenie zlyhalo
-     *      -4 Zlyhalo pripravenie SQL pri produktu.
+     *      -4 Zlyhalo pripravenie SQL pri hladani produktu.
      *      -5 Produkt uz existuje
      *      -6 Nepodarilo sa vykonat sql
+     *      -7 Zlyhalo pripravenie SQL pri vkladani produktu.
      */
-    public static function add_product($name, $price, $brand, $size, $type, $image = "none.jpg", $description="")
+    public static function add_product($name, $price, $brand, $size, $type, $image = "none.jpg", $description = "")
     {
         if (!isset($name) || !isset($description) || !isset($price)) {
             return -1;
@@ -145,24 +147,26 @@ class ProductController
             return -3;
         }
         if ($stmt = $conn->prepare("SELECT * FROM products WHERE name = ? ")) {
-            $stmt->bind_param("s",$name);
+            $stmt->bind_param("s", $name);
 
             $stmt->execute();
             $res = $stmt->get_result();
-            if($res->num_rows > 0){
+            if ($res->num_rows > 0) {
                 $stmt->close();
                 $conn->close();
                 return -5;
-            }else{
-                if($stmt = $conn->prepare("INSERT INTO products (name, description, size, brand, type, price, image) VALUES (?, ?, ?, ? ,? ,? ,?)")){
+            } else {
+                if ($stmt = $conn->prepare("INSERT INTO products (name, description, size, brand, type, price, image) VALUES (?, ?, ?, ? ,? ,? ,?)")) {
                     $stmt->bind_param("ssissds", $name, $description, $size, $brand, $type, $price, $image);
                     $stmt->execute();
                     $res = $stmt->get_result();
-                    if($res) {
+                    if ($res) {
                         return 1;
-                    }else{
+                    } else {
                         return -6;
                     }
+                }else{
+                    return  -7;
                 }
             }
 
@@ -183,9 +187,10 @@ class ProductController
      * @param array $size Velkost topanok
      * @param array $price pole s 2 miestami zaciatocna cena a konecna cena
      * @param array $brand Znacka
+     * @param int $first_row_id Riadok odkial mam hladat
      * @return array Vraciam pole produktov. Ak prazdne pole tak nastala chyba alebo produkt neexistuje
      */
-    public static function get_products($amount, $type = [], $size = [], $price = [], $brand = [])
+    public static function get_products($amount, $type = [], $size = [], $price = [], $brand = [], $first_row_id = 0)
     {
         $conn = new mysqli(DB_server, DB_username, DB_password, DB_name);
         if ($conn->connect_error) {
@@ -196,62 +201,62 @@ class ProductController
         $where_start = false;
         if ($type != []) {
             $type_str = $type[0];
-            for ($i = 1; $i<count($type); $i++){
-                $type_str.= "') OR (type ='".$type[$i];
+            for ($i = 1; $i < count($type); $i++) {
+                $type_str .= "') OR (type ='" . $type[$i];
             }
-            $sql_str .= "WHERE ((type='" . $type_str."'))";
+            $sql_str .= "WHERE ((type='" . $type_str . "'))";
             $where_start = true;
 
         }
         if ($size != []) {
             $size_str = $size[0];
-            for ($i = 1; $i<count($size); $i++){
-                $size_str.= "') OR (size ='".$size[$i];
+            for ($i = 1; $i < count($size); $i++) {
+                $size_str .= "') OR (size ='" . $size[$i];
             }
             if (!$where_start) {
-                $sql_str .= "WHERE ((size='" . $size_str."'))";
+                $sql_str .= "WHERE ((size='" . $size_str . "'))";
                 $where_start = true;
             } else {
-                $sql_str .= " AND( (size = '" . $size_str."'))";
+                $sql_str .= " AND( (size = '" . $size_str . "'))";
             }
         }
         if ($price[0] != null || $price[1] != null) {
-            if($price[0] == null) {
+            if ($price[0] == null) {
                 $price[0] = 0;
             }
-            if($price[1] == null) {
+            if ($price[1] == null) {
                 $price[1] = 0;
             }
 
             if (!$where_start) {
-                $sql_str .= "WHERE ((price > '" . $price[0] . "' AND price < '" . $price[1]."'))";
+                $sql_str .= "WHERE ((price > '" . $price[0] . "' AND price < '" . $price[1] . "'))";
                 $where_start = true;
-            }else{
-                $sql_str.= " AND( (price > '" . $price[0] . "'AND price < '" . $price[1]."'))";
+            } else {
+                $sql_str .= " AND( (price > '" . $price[0] . "'AND price < '" . $price[1] . "'))";
             }
         }
         if ($brand != []) {
             $brand_str = $brand[0];
-            for ($i = 1; $i<count($brand); $i++){
-                $brand_str.= "') OR (brand ='".$brand[$i];
+            for ($i = 1; $i < count($brand); $i++) {
+                $brand_str .= "') OR (brand ='" . $brand[$i];
             }
             if (!$where_start) {
-                $sql_str .= "WHERE(( brand ='" . $brand_str."'))";
+                $sql_str .= "WHERE(( brand ='" . $brand_str . "'))";
                 $where_start = true;
-            }else{
-                $sql_str.="AND( (brand ='" . $brand_str."'))";
+            } else {
+                $sql_str .= "AND( (brand ='" . $brand_str . "'))";
             }
         }
-        //echo "<p style='color: #000;'>".$sql_str."</p>";
-        if( $res = $conn->query($sql_str)){
+        $sql_str.=" LIMIT ".$first_row_id.", ".$amount;
+        echo "<p style='color: #000;'>".$sql_str."</p>";
+        if ($res = $conn->query($sql_str)) {
             $products = array();
             while ($row = $res->fetch_row()) {
                 array_push($products, $row);
             }
             $conn->close();
             return $products;
-        }
-        else{
+        } else {
             echo "Error";
             $conn->close();
             return [];
