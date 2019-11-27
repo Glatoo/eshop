@@ -4,7 +4,6 @@ include "../layout/nav.php";
 include "../controllers/productsController.php";
 if (!isset($_GET["index_page"])) {
     $index_page = 1;
-    echo "<p style='color: #fff;'>" . json_encode($_GET) . "</p>";
 }
 ?>
 <article style="background-color: #ffffff;">

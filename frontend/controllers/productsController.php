@@ -96,7 +96,7 @@ class ProductController
             echo $conn->connect_error;
             return [];
         }
-        if ($stmt = $conn->prepare("SELECT (value) FROM categories WHERE sub_category=?")) {
+        if ($stmt = $conn->prepare("SELECT (value) FROM categories WHERE sub_category=? ORDER BY value ASC ")) {
             $stmt->bind_param("s", $type);
             $stmt->execute();
             $res = $stmt->get_result();
@@ -247,8 +247,8 @@ class ProductController
                 $sql_str .= "AND( (brand ='" . $brand_str . "'))";
             }
         }
-        $sql_str.=" LIMIT ".$first_row_id.", ".$amount;
-        echo "<p style='color: #000;'>".$sql_str."</p>";
+        $sql_str.="LIMIT ".$first_row_id.", ".$amount;
+        //echo "<p style='color: #000;'>".$sql_str."</p>";
         if ($res = $conn->query($sql_str)) {
             $products = array();
             while ($row = $res->fetch_row()) {
