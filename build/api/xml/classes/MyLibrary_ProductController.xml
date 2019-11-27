@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="20" end="189">
-  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="6041" time="2019-11-27T13:20:42+01:00" unixtime="1574857242" sha1="c953bbbdcf26241555e2dd3844a0d038a29ec34a" relative="controllers/productsController.php"/>
+<class xmlns="http://xml.phpdox.net/src" full="MyLibrary\ProductController" namespace="MyLibrary" name="ProductController" abstract="false" final="false" start="20" end="237">
+  <file path="C:/xampp/htdocs/eshop/frontend/controllers" file="productsController.php" realpath="C:/xampp/htdocs/eshop/frontend/controllers/productsController.php" size="7596" time="2019-11-27T16:52:23+01:00" unixtime="1574869943" sha1="4d52f6dfadfd1a059f12f66412cb2eb0383eba23" relative="controllers/productsController.php"/>
   <docblock>
     <description compact="Kontroler produktov">Hlavna trieda pre produkty</description>
     <author value="Branislav Hozza &lt;brankohozza@gmail.com&gt;"/>
@@ -21,14 +21,17 @@
      -6 Zlyhalo pripravenie SQL pri vlozeni kategorie.</return>
     </docblock>
     <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="type" byreference="false" type="{unknown}"/>
   </method>
-  <method name="get_categories" start="91" end="105" abstract="false" final="false" static="true" visibility="public">
+  <method name="get_categories" start="92" end="112" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Ziskaj kategorie">Funkcia vrati kategorie</description>
-      <return description="Vraciam pole kategorii alebo prazdne pole:" type="array"/>
+      <param description="Typ kategorie(Brand/Type/Size)" type="string" variable="$type"/>
+      <return description="Vraciam pole kategorii podla typu alebo prazdne pole:" type="array"/>
     </docblock>
+    <parameter name="type" byreference="false" type="{unknown}"/>
   </method>
-  <method name="add_product" start="124" end="154" abstract="false" final="false" static="true" visibility="public">
+  <method name="add_product" start="131" end="161" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Pridaj produkt">Funkcia prida produkt do DB.</description>
       <param description="Nazov produktu" type="string" variable="$name"/>
@@ -48,14 +51,20 @@
     <parameter name="image" byreference="false" type="string" default="&quot;none.jpg&quot;"/>
     <parameter name="categories" byreference="false" type="array" default=""/>
   </method>
-  <method name="get_products" start="165" end="188" abstract="false" final="false" static="true" visibility="public">
+  <method name="get_products" start="175" end="236" abstract="false" final="false" static="true" visibility="public">
     <docblock>
       <description compact="Ziskaj produkty">Funkcia vrati produkty podla zadaneho mnozstva a kategorie, kategoria ale nie je potrebna.</description>
       <param description="Pocet produktov" type="int" variable="$amount"/>
-      <param description="Pole vybratych kategorii" type="array" variable="$categories"/>
+      <param description="Typ podkategorie" type="array" variable="$type"/>
+      <param description="Velkost topanok" type="array" variable="$size"/>
+      <param description="pole s 2 miestami zaciatocna cena a konecna cena" type="array" variable="$price"/>
+      <param description="Znacka" type="array" variable="$brand"/>
       <return description="Vraciam pole produktov. Ak prazdne pole tak nastala chyba alebo produkt neexistuje" type="array"/>
     </docblock>
     <parameter name="amount" byreference="false" type="{unknown}"/>
-    <parameter name="categories" byreference="false" type="{unknown}" default="NULL"/>
+    <parameter name="type" byreference="false" type="array" default=""/>
+    <parameter name="size" byreference="false" type="array" default=""/>
+    <parameter name="price" byreference="false" type="array" default=""/>
+    <parameter name="brand" byreference="false" type="array" default=""/>
   </method>
 </class>

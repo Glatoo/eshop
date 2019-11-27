@@ -8,20 +8,47 @@ include "../controllers/productsController.php"
         <h1>Products:</h1>
         <form action="products.php" style="color: white" method="post">
             <h1 style="color: #fff;">Category Search</h1>
+            <h2 style="color: white">Brand</h2>
             <?php
-            $categories = MyLibrary\ProductController::get_categories();
+            $sub_cat = "Brand";
+            $categories = MyLibrary\ProductController::get_categories($sub_cat);
             foreach ($categories as $category){
                 echo "<label for='".$category."'>".$category."</label>";
-                echo "<input value='".$category."' id='".$category."' type='checkbox' name='category[]'>";
+                echo "<input value='".$category."' id='".$category."' type='checkbox' name='brand[]'>";
                 echo "<br>";
             }
             ?>
-            <input type="submit" value="Search">
+            <h2 style="color: white">Size</h2>
+            <?php
+            $sub_cat = "Size";
+            $categories = MyLibrary\ProductController::get_categories($sub_cat);
+            foreach ($categories as $category){
+            echo "<label for='".$category."'>".$category."</label>";
+            echo "<input value='".$category."' id='".$category."' type='checkbox' name='size[]'>";
+            echo "<br>";
+            }
+            ?>
+            <h2 style="color: white">Type</h2>
+            <?php
+            $sub_cat = "Type";
+            $categories = MyLibrary\ProductController::get_categories($sub_cat);
+            foreach ($categories as $category){
+                echo "<label for='".$category."'>".$category."</label>";
+                echo "<input value='".$category."' id='".$category."' type='checkbox' name='type[]'>";
+                echo "<br>";
+            }
+            ?>
+            <h2 style="color: white">Price</h2>
+            <label for="min_price">Minimal price: </label>
+            <input type="number" name="min_price" id="min_price">
+            <label for="max_price">Maximum price: </label>
+            <input type="number" name="max_price" id="max_price">
+            <input type="submit" value="Search" name="search">
 
         </form>
         <?php
-        if (!empty($_POST["category"])) {
-            $products = MyLibrary\ProductController::get_products(20, $_POST["category"]);
+        if (isset($_POST["search"])) {
+            $products = MyLibrary\ProductController::get_products(20, $_POST["type"], $_POST["size"], [$_POST["min_price"], $_POST["max_price"]], $_POST["brand"]);
         }else{
             $products = MyLibrary\ProductController::get_products(20);
         }

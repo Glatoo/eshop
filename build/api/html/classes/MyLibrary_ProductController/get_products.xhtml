@@ -59,7 +59,7 @@
             <a href="#return">Return</a>
           </li>
           <li>
-            <a href="../../source/controllers/productsController.php.xhtml#line165">Source</a>
+            <a href="../../source/controllers/productsController.php.xhtml#line175">Source</a>
           </li>
         </ul>
       </nav>
@@ -73,7 +73,13 @@
           <code>public function get_products(int
         $amount,
             [array
-        $categories = NULL] )
+        $type = ,
+            [array
+        $size = ,
+            [array
+        $price = ,
+            [array
+        $brand = ]]]] )
             </code>
         </div>
         <h2 id="parameterlist">Parameters</h2>
@@ -82,10 +88,22 @@
                 —
                 int</dt>
           <dd>Pocet produktov</dd>
-          <dt><code>$categories</code>
+          <dt><code>$type</code>
                 —
                 array</dt>
-          <dd>Pole vybratych kategorii</dd>
+          <dd>Typ podkategorie</dd>
+          <dt><code>$size</code>
+                —
+                array</dt>
+          <dd>Velkost topanok</dd>
+          <dt><code>$price</code>
+                —
+                array</dt>
+          <dd>pole s 2 miestami zaciatocna cena a konecna cena</dd>
+          <dt><code>$brand</code>
+                —
+                array</dt>
+          <dd>Znacka</dd>
         </dl>
         <h2 id="return">Returns</h2>
         <dl class="styled">

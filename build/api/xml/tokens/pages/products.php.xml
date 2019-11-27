@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/pages" file="products.php" realpath="C:/xampp/htdocs/eshop/frontend/pages/products.php" size="1739" time="2019-11-26T21:32:00+01:00" unixtime="1574800320" sha1="3c9f391a447bbff840234f531912d797463c67da" relative="pages/products.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="C:/xampp/htdocs/eshop/frontend/pages" file="products.php" realpath="C:/xampp/htdocs/eshop/frontend/pages/products.php" size="3170" time="2019-11-27T16:50:56+01:00" unixtime="1574869856" sha1="2742283b4319ca6c3a6bd6bf7cd0336d658e4f40" relative="pages/products.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -40,10 +40,22 @@
     <token name="T_INLINE_HTML">            &lt;h1 style="color: #fff;"&gt;Category Search&lt;/h1&gt;</token>
   </line>
   <line no="11">
+    <token name="T_INLINE_HTML">            &lt;h2 style="color: white"&gt;Brand&lt;/h2&gt;</token>
+  </line>
+  <line no="12">
     <token name="T_INLINE_HTML">            </token>
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
-  <line no="12">
+  <line no="13">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$sub_cat</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Brand"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="14">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$categories</token>
     <token name="T_WHITESPACE"> </token>
@@ -55,10 +67,11 @@
     <token name="T_DOUBLE_COLON">::</token>
     <token name="T_STRING">get_categories</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sub_cat</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="13">
+  <line no="15">
     <token name="T_WHITESPACE">            </token>
     <token name="T_FOREACH">foreach</token>
     <token name="T_WHITESPACE"> </token>
@@ -71,7 +84,7 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="14">
+  <line no="16">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -86,7 +99,7 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/label&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="15">
+  <line no="17">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -98,53 +111,247 @@
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_VARIABLE">$category</token>
     <token name="T_PHPDOX_DOT">.</token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"' type='checkbox' name='category[]'&gt;"</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' type='checkbox' name='brand[]'&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="16">
+  <line no="18">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;br&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="17">
+  <line no="19">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="18">
+  <line no="20">
     <token name="T_WHITESPACE">            </token>
     <token name="T_CLOSE_TAG">?&gt;</token>
   </line>
-  <line no="19">
-    <token name="T_INLINE_HTML">            &lt;input type="submit" value="Search"&gt;</token>
-  </line>
-  <line no="20"/>
   <line no="21">
-    <token name="T_INLINE_HTML">        &lt;/form&gt;</token>
+    <token name="T_INLINE_HTML">            &lt;h2 style="color: white"&gt;Size&lt;/h2&gt;</token>
   </line>
   <line no="22">
-    <token name="T_INLINE_HTML">        </token>
+    <token name="T_INLINE_HTML">            </token>
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
   <line no="23">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$sub_cat</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Size"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="24">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$categories</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">MyLibrary</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ProductController</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">get_categories</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sub_cat</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="25">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$categories</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="26">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;label for='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/label&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="27">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;input value='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' id='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' type='checkbox' name='size[]'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="28">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;br&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="29">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="30">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="31">
+    <token name="T_INLINE_HTML">            &lt;h2 style="color: white"&gt;Type&lt;/h2&gt;</token>
+  </line>
+  <line no="32">
+    <token name="T_INLINE_HTML">            </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="33">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$sub_cat</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"Type"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="34">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_VARIABLE">$categories</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_EQUAL">=</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">MyLibrary</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">ProductController</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">get_categories</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$sub_cat</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="35">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_FOREACH">foreach</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_VARIABLE">$categories</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_AS">as</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="36">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;label for='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/label&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="37">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;input value='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' id='"</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_VARIABLE">$category</token>
+    <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"' type='checkbox' name='type[]'&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="38">
+    <token name="T_WHITESPACE">                </token>
+    <token name="T_ECHO">echo</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;br&gt;"</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="39">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="40">
+    <token name="T_WHITESPACE">            </token>
+    <token name="T_CLOSE_TAG">?&gt;</token>
+  </line>
+  <line no="41">
+    <token name="T_INLINE_HTML">            &lt;h2 style="color: white"&gt;Price&lt;/h2&gt;</token>
+  </line>
+  <line no="42">
+    <token name="T_INLINE_HTML">            &lt;label for="min_price"&gt;Minimal price: &lt;/label&gt;</token>
+  </line>
+  <line no="43">
+    <token name="T_INLINE_HTML">            &lt;input type="number" name="min_price" id="min_price"&gt;</token>
+  </line>
+  <line no="44">
+    <token name="T_INLINE_HTML">            &lt;label for="max_price"&gt;Maximum price: &lt;/label&gt;</token>
+  </line>
+  <line no="45">
+    <token name="T_INLINE_HTML">            &lt;input type="number" name="max_price" id="max_price"&gt;</token>
+  </line>
+  <line no="46">
+    <token name="T_INLINE_HTML">            &lt;input type="submit" value="Search" name="search"&gt;</token>
+  </line>
+  <line no="47"/>
+  <line no="48">
+    <token name="T_INLINE_HTML">        &lt;/form&gt;</token>
+  </line>
+  <line no="49">
+    <token name="T_INLINE_HTML">        </token>
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="50">
     <token name="T_WHITESPACE">        </token>
     <token name="T_IF">if</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
-    <token name="T_PHPDOX_EXCLAMATION_MARK">!</token>
-    <token name="T_EMPTY">empty</token>
+    <token name="T_ISSET">isset</token>
     <token name="T_PHPDOX_OPEN_BRACKET">(</token>
     <token name="T_VARIABLE">$_POST</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"category"</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"search"</token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="24">
+  <line no="51">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$products</token>
     <token name="T_WHITESPACE"> </token>
@@ -161,18 +368,44 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$_POST</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"category"</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"type"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$_POST</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"size"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_VARIABLE">$_POST</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"min_price"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$_POST</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"max_price"</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$_POST</token>
+    <token name="T_PHPDOX_OPEN_SQUARE">[</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"brand"</token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="25">
+  <line no="52">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
     <token name="T_ELSE">else</token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="26">
+  <line no="53">
     <token name="T_WHITESPACE">            </token>
     <token name="T_VARIABLE">$products</token>
     <token name="T_WHITESPACE"> </token>
@@ -188,11 +421,11 @@
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="27">
+  <line no="54">
     <token name="T_WHITESPACE">        </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="28">
+  <line no="55">
     <token name="T_WHITESPACE">            </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -206,7 +439,7 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"ks&lt;/h1&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="29">
+  <line no="56">
     <token name="T_WHITESPACE">            </token>
     <token name="T_FOREACH">foreach</token>
     <token name="T_WHITESPACE"> </token>
@@ -224,20 +457,20 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="30">
+  <line no="57">
     <token name="T_WHITESPACE">                </token>
     <token name="T_VARIABLE">$index</token>
     <token name="T_INC">++</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="31">
+  <line no="58">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;div class='product-container' style='color: white'&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="32">
+  <line no="59">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -260,7 +493,7 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/h1&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="33">
+  <line no="60">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -278,7 +511,7 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/p&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="34">
+  <line no="61">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
@@ -296,57 +529,55 @@
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/i&gt;&lt;br&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="35">
+  <line no="62">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;p class='product-img'&gt;"</token>
-    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;img class='product-img' width=200 height=100 src='../img/"</token>
     <token name="T_PHPDOX_DOT">.</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$product</token>
     <token name="T_PHPDOX_OPEN_SQUARE">[</token>
     <token name="T_LNUMBER">3</token>
     <token name="T_PHPDOX_CLOSE_SQUARE">]</token>
-    <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_DOT">.</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">"'&gt;"</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/p&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="36">
+  <line no="63">
     <token name="T_WHITESPACE">                </token>
     <token name="T_ECHO">echo</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"&lt;/div&gt;"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="37">
+  <line no="64">
     <token name="T_WHITESPACE">            </token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="38">
+  <line no="65">
     <token name="T_WHITESPACE">        </token>
     <token name="T_CLOSE_TAG">?&gt;</token>
   </line>
-  <line no="39">
+  <line no="66">
     <token name="T_INLINE_HTML">        &lt;p&gt;products&lt;/p&gt;</token>
   </line>
-  <line no="40">
+  <line no="67">
     <token name="T_INLINE_HTML">    &lt;/section&gt;</token>
   </line>
-  <line no="41">
+  <line no="68">
     <token name="T_INLINE_HTML">&lt;/article&gt;</token>
   </line>
-  <line no="42"/>
-  <line no="43">
+  <line no="69"/>
+  <line no="70">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
-  <line no="44">
+  <line no="71">
     <token name="T_INCLUDE">include</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_CONSTANT_ENCAPSED_STRING">"../layout/footer.php"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="45"/>
+  <line no="72"/>
 </source>

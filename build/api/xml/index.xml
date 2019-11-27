@@ -3,5 +3,5 @@
   <namespace name="MyLibrary">
     
     
-  <class name="BlogController" src="controllers/blogController.php" description="Kontroler blogov" xml="classes/MyLibrary_BlogController.xml"/><class name="ProductController" src="controllers/productsController.php" description="Kontroler produktov" xml="classes/MyLibrary_ProductController.xml"/><class name="UserController" src="controllers/userController.php" description="Kontroler uzivatela" xml="classes/MyLibrary_UserController.xml"/></namespace>
+  <class name="BlogController" src="controllers/blogController.php" description="Kontroler blogov" xml="classes/MyLibrary_BlogController.xml"/><class name="UserController" src="controllers/userController.php" description="Kontroler uzivatela" xml="classes/MyLibrary_UserController.xml"/><class name="ProductController" src="controllers/productsController.php" description="Kontroler produktov" xml="classes/MyLibrary_ProductController.xml"/></namespace>
 </index>
